@@ -1,35 +1,36 @@
+import { Box } from "@material-ui/core";
+import { ComponentPreviewCardsSection } from "./components/ComponentPreviewCardsSection";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
+import { mockComponentPreviewCardMetadataArray } from "./utils/Mocks"
 import React from "react";
 import ReactDOM from "react-dom";
-import Typography from "@material-ui/core/Typography";
+import Header from "./components/Header";
 
 export default function JetpackComposeApp() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Container maxWidth="md">
-        <Typography className={classes.message} align="center">
-            Jetpack Compose
-        </Typography>
-      </Container>
-    </div>
+    <Container maxWidth="xl" className={classes.root}>
+      <Box height="100%" width="100%">
+        <Box height="40%">
+          <Header />
+        </Box>
+        <Box>
+          <ComponentPreviewCardsSection
+            sectionTitle="Title"
+            metadataArray={mockComponentPreviewCardMetadataArray}
+          />
+        </Box>
+      </Box>
+    </Container>
   );
 }
 
 const useStyles = makeStyles({
   root: {
-    display: 'flex',  
-    justifyContent:'center', 
-    alignItems:'center', 
-    height: '100vh',
-    backgroundColor: "#ccff90"
-  },
-  message: {
-    fontSize: 50,
-    fontWeight: "bold",
-    color: "#33691e",
-    fontFamily: 'Playfair Display'
+    height: "100vh",
+    paddingLeft: "0",
+    paddingRight: "0",
   },
 });
 
