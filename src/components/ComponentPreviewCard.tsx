@@ -35,14 +35,14 @@ export const ComponentPreviewCard: FunctionComponent<ComponentPreviewCardProps> 
 
 const useStyles = makeStyles({
   root: {
-    width: 350,
+    width: 216,
     "&:hover": {
       cursor: "pointer",
     },
   },
   media: {
     height: 0,
-    paddingTop: "100%", // 16:9
+    paddingTop: "177%", // 16:9
   },
   title: {
     fontSize: 14,
