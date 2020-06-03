@@ -33,6 +33,13 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
+function a11yProps(index: any) {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,
+    };
+  }
+
 export default function NavigationBar() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
@@ -52,12 +59,12 @@ export default function NavigationBar() {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="Item One" />
-          <Tab label="Item Two" />
-          <Tab label="Item Three" />
+          <Tab label="Item One" {...a11yProps(0)}/>
+          <Tab label="Item Two" {...a11yProps(1)}/>
+          <Tab label="Item Three" {...a11yProps(2)}/>
         </Tabs>
       </Paper>
-      {/* <TabPanel value="Option 1" index={0}>
+      <TabPanel value="Option 1" index={0}>
         Item One
       </TabPanel>
       <TabPanel value="Option 2" index={1}>
@@ -65,7 +72,7 @@ export default function NavigationBar() {
       </TabPanel>
       <TabPanel value="Option 3" index={2}>
         Item Three
-      </TabPanel> */}
+      </TabPanel>
     </div>
   );
 }

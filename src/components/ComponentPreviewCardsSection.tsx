@@ -42,13 +42,15 @@ export const ComponentPreviewCardsSection: FunctionComponent<ComponentPreviewCar
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "#ccff90",
+    backgroundColor: "#FFFFFF",
     paddingLeft: "16px",
     paddingRight: "16px", 
-    alignContent: "center"
   },
   grid: {
     paddingTop: "1%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     marginBottom: 0,

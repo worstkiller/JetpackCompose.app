@@ -15,7 +15,7 @@ export default function Header() {
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "yellow",
+    backgroundColor: "#ccff90",
     height: "100%",
     width: "100%",
     display: "flex",
