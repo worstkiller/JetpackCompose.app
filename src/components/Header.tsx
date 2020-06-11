@@ -59,5 +59,6 @@ const headerTextStyles = makeStyles({
     fontWeight: "bold",
     color: "#33691e",
     fontFamily: "Playfair Display",
+    width: "100%"
   },
 });

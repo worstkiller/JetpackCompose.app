@@ -22,7 +22,7 @@ export const ComponentPreviewCardsSection: FunctionComponent<ComponentPreviewCar
       </Typography> */}
       <Grid container className={classes.grid}>
         <Grid item xs={12}>
-          <Grid container justify="flex-start" spacing={2}>
+          <Grid container spacing={2}>
             {props.metadataArray.map((metadata) => (
               <Grid key={metadata.id} item>
                 <ComponentPreviewCard
@@ -48,9 +48,6 @@ const useStyles = makeStyles({
   },
   grid: {
     paddingTop: "1%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
   },
   title: {
     marginBottom: 0,
