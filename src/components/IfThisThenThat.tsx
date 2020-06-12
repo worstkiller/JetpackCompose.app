@@ -1,9 +1,8 @@
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { Box } from "@material-ui/core";
-import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import React from "react";
+import React, { FunctionComponent } from "react";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 
@@ -37,85 +36,68 @@ export default function IfThisThenThatComponent() {
           />
         </Grid>
         <Grid container item xs={6} className={classes.secondColumn}>
-          <Box display="flex" flexDirection="column" className={classes.boxCenter}>
-            <Box>
-            <Typography variant="h4" align="center" className={classes.typography}>
-              Then you will use......
-            </Typography>
-            </Box>
-            <Box className={classes.autocompleteBox}>
-            <Autocomplete
-              id="combo-box-demo"
-              options={oldVsNew}
-              classes={{
-                option: classes.dropdownOptions,
-              }}
-              getOptionLabel={(option) => option.new}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  // label={
-
-                  // }
-                  variant="standard"
-                  InputProps={{
-                    ...params.InputProps,
-                    classes: {
-                      input: classes.inputTextField,
-                    },
-                  }}
-                />
-              )}
-            />
-            </Box>
-            <Box>
-            <Typography variant="h4" align="center" className={classes.typography}>
-              In Jetpack Compose!
-            </Typography>
-            </Box>
-          </Box>
-
-
-
-          {/* <Grid item xs={12} className={classes.topTypography}>
-            <Typography variant="h4" align="center" className={classes.topTypography}>
-              Then you will use......
-            </Typography>
-          </Grid>
-          <Grid item xs={12} className={classes.alignCenter}>
-            <Autocomplete
-              id="combo-box-demo"
-              className={classes.autocompleteBox}
-              options={oldVsNew}
-              classes={{
-                option: classes.option,
-              }}
-              getOptionLabel={(option) => option.new}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  // label={
-
-                  // }
-                  variant="standard"
-                  InputProps={{
-                    ...params.InputProps,
-                    classes: {
-                      input: classes.textField,
-                    },
-                  }}
-                />
-              )}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h4" align="center">
-            in Jetpack Compose
-            </Typography>
-          </Grid> */}
+          <IfThisThenThanColumnComponent prefix="Then you will use......" suffix="In Jetpack Compose!" optionValues={[""]} />
         </Grid>
       </Grid>
     </div>
+  );
+}
+
+interface IfThisThenThanColumnComponentProps {
+  prefix: string;
+  suffix: string;
+  optionValues: [string];
+}
+
+export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColumnComponentProps> = (
+  props
+) => {
+  const classes = useStyles();
+  return (
+    <>
+      <Box display="flex" flexDirection="column" className={classes.boxCenter}>
+        <Box>
+          <Typography
+            variant="h4"
+            align="center"
+            className={classes.typography}
+          >
+            {props.prefix}
+          </Typography>
+        </Box>
+        <Box className={classes.autocompleteBox}>
+          <Autocomplete
+            id="combo-box-demo"
+            options={oldVsNew}
+            classes={{
+              option: classes.dropdownOptions,
+            }}
+            getOptionLabel={(option) => option.new}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="standard"
+                InputProps={{
+                  ...params.InputProps,
+                  classes: {
+                    input: classes.inputTextField,
+                  },
+                }}
+              />
+            )}
+          />
+        </Box>
+        <Box>
+          <Typography
+            variant="h4"
+            align="center"
+            className={classes.typography}
+          >
+            {props.suffix}
+          </Typography>
+        </Box>
+      </Box>
+    </>
   );
 }
 
@@ -143,8 +125,8 @@ const useStyles = makeStyles({
   },
   typography: {
     fontSize: 50,
-    marginBottom:100,
-    marginTop:100,
+    marginBottom: 100,
+    marginTop: 100,
     color: "#000000",
     fontWeight: "bold",
     fontFamily: "Playfair Display",
