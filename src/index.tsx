@@ -1,5 +1,4 @@
-import LandingPageComponent from "./components/LandingPageComponent";
-import NavigationBar from "./components/NavigationBar";
+import IfThisThenThatComponent from "./components/IfThisThenThat";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -7,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 export default function JetpackComposeApp() {
   return (
     <Router>
-      <NavigationBar />
       <Switch>
         <Route path="/blogs">
           <div>Blogs</div>
@@ -16,7 +14,7 @@ export default function JetpackComposeApp() {
           <div>Videos</div>
         </Route>
         <Route path="/">
-          <LandingPageComponent />
+          <IfThisThenThatComponent />
         </Route>
       </Switch>
     </Router>
