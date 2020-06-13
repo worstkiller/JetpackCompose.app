@@ -1,15 +1,24 @@
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { Box } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
+import { createMuiTheme, makeStyles } from "@material-ui/core/styles";
 import React, { FunctionComponent, useState } from "react";
 import TextField from "@material-ui/core/TextField";
+import { ThemeProvider } from '@material-ui/styles';
 import Typography from "@material-ui/core/Typography";
 
 enum ComponentType {
   KEY,
   VALUE,
 }
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#ccff90"
+    }
+  }
+});
 
 export default function IfThisThenThatComponent() {
   const classes = useStyles();
@@ -25,7 +34,7 @@ export default function IfThisThenThatComponent() {
         <Grid item xs={6} className={classes.firstColumn}>
           <IfThisThenThanColumnComponent
             prefix="If you Used....."
-            suffix="In Classic Android"
+            suffix="In Classic Android 🤖💚"
             selectedKey={selectedClassicAndroid}
             map={classicAndroidVsJetpackComposeMap}
             handleChange={handleChange}
@@ -76,6 +85,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
         </Box>
         {props.componentType === ComponentType.KEY ? (
           <Box className={classes.autocompleteBox}>
+            <ThemeProvider theme={theme}>
             <Autocomplete
               id="combo-box-demo"
               options={classicAndroid}
@@ -91,6 +101,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
                 <TextField
                   {...params}
                   variant="standard"
+                  placeholder="Android Thing"
                   InputProps={{
                     ...params.InputProps,
                     classes: {
@@ -100,6 +111,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
                 />
               )}
             />
+            </ThemeProvider>
           </Box>
         ) : (
           <Box>
@@ -113,7 +125,6 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
                   <span role="img" aria-label="Pointing in Left Direction">
                     👈
                   </span>
-                  &nbsp; Choose a value
                 </div>
               ) : (
                 props.map.get(props.selectedKey)
@@ -186,22 +197,19 @@ const useStyles = makeStyles({
   },
 });
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const classicAndroidVsJetpackCompose = [
-  { classic: "LinearLayout", compose: "Row/Column" },
-  { classic: "FrameLayout", compose: "Stack" },
-  { classic: "ConstraintLayout", compose: "ConstraintLayout" },
-  { classic: "TextView", compose: "Text" },
-  { classic: "EditText", compose: "TextField" },
-  { classic: "Themes", compose: "MaterialTheme" },
-  { classic: "CardView", compose: "Card" },
-];
-
 let classicAndroidVsJetpackComposeMap = new Map([
-  ["LinearLayout", "Row/Column"],
-  ["FrameLayout", "Stack"],
+  ["AppBar", "TopAppBar"],
+  ["Button", "Button"],
+  ["CardView", "Card"],
   ["ConstraintLayout", "ConstraintLayout"],
-  ["TextView", "Text"],
   ["EditText", "TextField"],
+  ["FrameLayout", "Stack"],
+  ["EditText", "TextField"],
+  ["LinearLayout", "Row/Column"],
+  ["ProgressBar", "ProgressIndicator"],
+  ["RecyclerView", "AdapterList"],
+  ["Slider", "Slider"],
+  ["ScrollView", "Vertical/Horizontal Scroller"],
+  ["TextView", "Text"],
   ["Themes", "MaterialTheme"],
 ]);
