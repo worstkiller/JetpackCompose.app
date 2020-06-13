@@ -1,25 +1,10 @@
-import Autocomplete from "@material-ui/lab/Autocomplete";
-import { Box } from "@material-ui/core";
+import classicAndroidVsJetpackComposeMap from "../utils/Data";
 import Grid from "@material-ui/core/Grid";
-import { createMuiTheme, makeStyles } from "@material-ui/core/styles";
-import JetpackComposeMetadata from "../models/JetpackComposeMetadata";
-import React, { FunctionComponent, useState } from "react";
-import TextField from "@material-ui/core/TextField";
-import { ThemeProvider } from '@material-ui/styles';
-import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { IfThisThenThanColumnComponent } from "./IfThisThenThatColumnComponent";
+import IfThisThenThatColumnComponentType from "../models/IfThisThenThatColumnComponentType";
 
-enum ComponentType {
-  KEY,
-  VALUE,
-}
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#ccff90"
-    }
-  }
-});
+import React, { useState } from "react";
 
 export default function IfThisThenThatComponent() {
   const classes = useStyles();
@@ -39,7 +24,7 @@ export default function IfThisThenThatComponent() {
             selectedKey={selectedClassicAndroid}
             map={classicAndroidVsJetpackComposeMap}
             handleChange={handleChange}
-            componentType={ComponentType.KEY}
+            componentType={IfThisThenThatColumnComponentType.KEY}
           />
         </Grid>
         <Grid container item xs={6} className={classes.secondColumn}>
@@ -49,7 +34,7 @@ export default function IfThisThenThatComponent() {
             selectedKey={selectedClassicAndroid}
             map={classicAndroidVsJetpackComposeMap}
             handleChange={handleChange}
-            componentType={ComponentType.VALUE}
+            componentType={IfThisThenThatColumnComponentType.VALUE}
           />
         </Grid>
       </Grid>
@@ -57,110 +42,9 @@ export default function IfThisThenThatComponent() {
   );
 }
 
-interface IfThisThenThanColumnComponentProps {
-  prefix: string;
-  suffix: string;
-  selectedKey: string;
-  map: Map<string, JetpackComposeMetadata>;
-  componentType: ComponentType;
-  handleChange: (value: string) => void;
-}
-
-export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColumnComponentProps> = (
-  props
-) => {
-  const classes = useStyles();
-  const classicAndroid = Array.from(classicAndroidVsJetpackComposeMap.keys());
-
-  return (
-    <>
-      <Box display="flex" flexDirection="column" className={classes.boxCenter}>
-        <Box>
-          <Typography
-            variant="h4"
-            align="center"
-            className={classes.typography}
-          >
-            {props.prefix}
-          </Typography>
-        </Box>
-        {props.componentType === ComponentType.KEY ? (
-          <Box className={classes.autocompleteBox}>
-            <ThemeProvider theme={theme}>
-            <Autocomplete
-              id="combo-box-demo"
-              options={classicAndroid}
-              classes={{
-                option: classes.dropdownOptions,
-              }}
-              onInputChange={(event, newInputValue) => {
-                console.log(newInputValue);
-                props.handleChange(newInputValue);
-              }}
-              getOptionLabel={(option) => option}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  variant="standard"
-                  placeholder="Android Thing"
-                  InputProps={{
-                    ...params.InputProps,
-                    classes: {
-                      input: classes.inputTextField,
-                    },
-                  }}
-                />
-              )}
-            />
-            </ThemeProvider>
-          </Box>
-        ) : (
-          <Box>
-            <Typography
-              variant="h4"
-              align="center"
-              className={classes.inputTextField}
-            >
-              {props.selectedKey === "" ? (
-                <div>
-                  <span role="img" aria-label="Pointing in Left Direction">
-                    👈
-                  </span>
-                </div>
-              ) : (
-                props.map.get(props.selectedKey)?.composableName
-              )}
-            </Typography>
-          </Box>
-        )}
-        <Box>
-          <Typography
-            variant="h4"
-            align="center"
-            className={classes.typography}
-          >
-            {props.suffix}
-          </Typography>
-        </Box>
-      </Box>
-    </>
-  );
-};
-
 const useStyles = makeStyles({
   root: {
     width: "100%",
-  },
-  boxCenter: {
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  alignCenter: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
   },
   firstColumn: {
     background: "#FFFFFF",
@@ -168,26 +52,6 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  },
-  typography: {
-    fontSize: 50,
-    marginBottom: 100,
-    marginTop: 100,
-    color: "#000000",
-    fontWeight: "bold",
-    fontFamily: "Playfair Display",
-  },
-  autocompleteBox: {
-    width: "75%",
-  },
-  inputTextField: {
-    fontSize: 70,
-    textAlign: "center",
-    fontWeight: "bold",
-    fontFamily: "Playfair Display",
-  },
-  dropdownOptions: {
-    fontSize: 50,
   },
   secondColumn: {
     background: "#ccff90",
@@ -197,20 +61,3 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
 });
-
-let classicAndroidVsJetpackComposeMap = new Map([
-  ["AppBar", new JetpackComposeMetadata("TopAppBar", "", "")],
-  ["Button", new JetpackComposeMetadata("Button", "", "")],
-  ["CardView", new JetpackComposeMetadata("Card", "", "")],
-  ["ConstraintLayout", new JetpackComposeMetadata("ConstraintLayout", "", "")],
-  ["EditText", new JetpackComposeMetadata("TextField", "", "")],
-  ["FrameLayout", new JetpackComposeMetadata("Stack", "", "")],
-  ["EditText", new JetpackComposeMetadata("TextField", "", "")],
-  ["LinearLayout", new JetpackComposeMetadata("Row/Column", "", "")],
-  ["ProgressBar", new JetpackComposeMetadata("ProgressIndicator", "", "")],
-  ["RecyclerView", new JetpackComposeMetadata("AdapterList", "", "")],
-  ["Slider", new JetpackComposeMetadata("Slider", "", "")],
-  ["ScrollView", new JetpackComposeMetadata("Vertical/Horizontal Scroller", "", "")],
-  ["TextView", new JetpackComposeMetadata("Text", "", "")],
-  ["Themes", new JetpackComposeMetadata("MaterialTheme", "", "")],
-]);
