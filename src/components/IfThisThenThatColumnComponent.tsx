@@ -7,7 +7,7 @@ import JetpackComposeMetadata from "../models/JetpackComposeMetadata";
 import Link from "@material-ui/core/Link";
 import React, { FunctionComponent } from "react";
 import TextField from "@material-ui/core/TextField";
-import { ThemeProvider } from "@material-ui/styles";
+import { ThemeProvider, ClassNameMap } from "@material-ui/styles";
 import Typography from "@material-ui/core/Typography";
 
 interface IfThisThenThanColumnComponentProps {
@@ -40,7 +40,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
           <Typography
             variant="h4"
             align="center"
-            className={classes.typography}
+            className={getTypographyClass(props.componentType, classes)}
           >
             {props.prefix}
           </Typography>
@@ -63,7 +63,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
                   <TextField
                     {...params}
                     variant="standard"
-                    placeholder="Android Thing"
+                    placeholder="<Android Thing>"
                     InputProps={{
                       ...params.InputProps,
                       classes: {
@@ -98,18 +98,35 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
           <Typography
             variant="h4"
             align="center"
-            className={classes.typography}
+            className={getTypographyClass(props.componentType, classes)}
           >
             {props.suffix}
           </Typography>
         </Box>
 
-        {props.componentType === IfThisThenThatColumnComponentType.VALUE ? (
-          <Box>
-            <Link href={props.map.get(props.selectedKey)?.composableGithubLink}>
-              Here is an example to learn more
-            </Link>
-          </Box>
+        {props.componentType === IfThisThenThatColumnComponentType.VALUE &&
+        props.selectedKey !== "" ? (
+          <>
+            <Box>
+              <Link
+                variant="overline"
+                className={classes.link}
+                href={props.map.get(props.selectedKey)?.composableGithubLink}
+              >
+                🤩 Here is an example to help you get started 🤩
+              </Link>
+            </Box>
+
+            <Box>
+              <Link
+                variant="overline"
+                className={classes.link}
+                href={props.map.get(props.selectedKey)?.officialDocsLink}
+              >
+                Official Docs
+              </Link>
+            </Box>
+          </>
         ) : (
           <></>
         )}
@@ -118,6 +135,10 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
   );
 };
 
+function getTypographyClass(componentType: IfThisThenThatColumnComponentType, classes: ClassNameMap) {
+    return componentType === IfThisThenThatColumnComponentType.KEY ? classes.typographyKey : classes.typographyValue
+}
+
 const useStyles = makeStyles({
   boxCenter: {
     width: "100%",
@@ -125,13 +146,26 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
   },
-  typography: {
-    fontSize: 50,
+  typographyKey: {
+    fontSize: 55,
+    color: "#9e9e9e",
     marginBottom: 100,
     marginTop: 100,
-    color: "#000000",
     fontWeight: "bold",
+    fontFamily: "Limelight",
+  },
+  typographyValue: {
+    fontSize: 55,
+    color: "#558b2f",
+    marginBottom: 100,
+    marginTop: 100,
+    fontWeight: "bold",
+    fontFamily: "Limelight",
+  },
+  link: {
+    fontSize: 18,
     fontFamily: "Playfair Display",
+    color: "#33691e",
   },
   autocompleteBox: {
     width: "75%",
@@ -139,10 +173,11 @@ const useStyles = makeStyles({
   inputTextField: {
     fontSize: 70,
     textAlign: "center",
-    fontWeight: "bold",
+    fontWeight: "bolder",
     fontFamily: "Playfair Display",
   },
   dropdownOptions: {
     fontSize: 50,
+    fontFamily: "Playfair Display",
   },
 });

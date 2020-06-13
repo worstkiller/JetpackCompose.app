@@ -1,4 +1,5 @@
 import IfThisThenThatComponent from "./components/IfThisThenThat";
+import IfThisThenThatFooter from "./components/IfThisThenThatFooter";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
