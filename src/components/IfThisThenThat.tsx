@@ -2,6 +2,7 @@ import Autocomplete from "@material-ui/lab/Autocomplete";
 import { Box } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import { createMuiTheme, makeStyles } from "@material-ui/core/styles";
+import JetpackComposeMetadata from "../models/JetpackComposeMetadata";
 import React, { FunctionComponent, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { ThemeProvider } from '@material-ui/styles';
@@ -60,7 +61,7 @@ interface IfThisThenThanColumnComponentProps {
   prefix: string;
   suffix: string;
   selectedKey: string;
-  map: Map<string, string>;
+  map: Map<string, JetpackComposeMetadata>;
   componentType: ComponentType;
   handleChange: (value: string) => void;
 }
@@ -127,7 +128,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
                   </span>
                 </div>
               ) : (
-                props.map.get(props.selectedKey)
+                props.map.get(props.selectedKey)?.composableName
               )}
             </Typography>
           </Box>
@@ -198,18 +199,18 @@ const useStyles = makeStyles({
 });
 
 let classicAndroidVsJetpackComposeMap = new Map([
-  ["AppBar", "TopAppBar"],
-  ["Button", "Button"],
-  ["CardView", "Card"],
-  ["ConstraintLayout", "ConstraintLayout"],
-  ["EditText", "TextField"],
-  ["FrameLayout", "Stack"],
-  ["EditText", "TextField"],
-  ["LinearLayout", "Row/Column"],
-  ["ProgressBar", "ProgressIndicator"],
-  ["RecyclerView", "AdapterList"],
-  ["Slider", "Slider"],
-  ["ScrollView", "Vertical/Horizontal Scroller"],
-  ["TextView", "Text"],
-  ["Themes", "MaterialTheme"],
+  ["AppBar", new JetpackComposeMetadata("TopAppBar", "", "")],
+  ["Button", new JetpackComposeMetadata("Button", "", "")],
+  ["CardView", new JetpackComposeMetadata("Card", "", "")],
+  ["ConstraintLayout", new JetpackComposeMetadata("ConstraintLayout", "", "")],
+  ["EditText", new JetpackComposeMetadata("TextField", "", "")],
+  ["FrameLayout", new JetpackComposeMetadata("Stack", "", "")],
+  ["EditText", new JetpackComposeMetadata("TextField", "", "")],
+  ["LinearLayout", new JetpackComposeMetadata("Row/Column", "", "")],
+  ["ProgressBar", new JetpackComposeMetadata("ProgressIndicator", "", "")],
+  ["RecyclerView", new JetpackComposeMetadata("AdapterList", "", "")],
+  ["Slider", new JetpackComposeMetadata("Slider", "", "")],
+  ["ScrollView", new JetpackComposeMetadata("Vertical/Horizontal Scroller", "", "")],
+  ["TextView", new JetpackComposeMetadata("Text", "", "")],
+  ["Themes", new JetpackComposeMetadata("MaterialTheme", "", "")],
 ]);
