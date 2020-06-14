@@ -38,7 +38,7 @@ export default function IfThisThenThatComponent() {
             componentType={IfThisThenThatColumnComponentType.VALUE}
           />
         </Grid>
-        <Grid item xs = {12} className={classes.footer}>
+        <Grid item xs={12} className={classes.footer}>
           <IfThisThenThatFooter />
         </Grid>
       </Grid>
@@ -53,6 +53,7 @@ const useStyles = makeStyles({
   firstColumn: {
     background: "#FFFFFF",
     height: "90vh",
+    width: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -60,12 +61,14 @@ const useStyles = makeStyles({
   secondColumn: {
     background: "#ccff90",
     height: "90vh",
+    width: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
   footer: {
     height: "20vh",
+    width: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

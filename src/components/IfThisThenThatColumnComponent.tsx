@@ -176,7 +176,7 @@ const useStyles = makeStyles({
     color: "#33691e",
   },
   autocompleteBox: {
-    width: "75%",
+    width: "80%",
   },
   inputTextField: {
     fontSize: 70,
