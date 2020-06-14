@@ -18,7 +18,7 @@ export default function IfThisThenThatComponent() {
   return (
     <div className={classes.root}>
       <Grid container className={classes.root} spacing={2}>
-        <Grid item xs={6} className={classes.firstColumn}>
+        <Grid item xs={12} lg={6} className={classes.firstColumn}>
           <IfThisThenThanColumnComponent
             prefix="If you used..."
             suffix="In Classic Android 🤖💚"
@@ -28,7 +28,7 @@ export default function IfThisThenThatComponent() {
             componentType={IfThisThenThatColumnComponentType.KEY}
           />
         </Grid>
-        <Grid container item xs={6} className={classes.secondColumn}>
+        <Grid container item xs={12} lg={6} className={classes.secondColumn}>
           <IfThisThenThanColumnComponent
             prefix="Then, you should use..."
             suffix="In Jetpack Compose 🚀"
