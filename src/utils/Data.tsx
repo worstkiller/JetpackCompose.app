@@ -7,7 +7,7 @@ const classicAndroidVsJetpackComposeMap = new Map([
     ],
     ["Button", new JetpackComposeMetadata("Button", "", "")],
     ["CardView", new JetpackComposeMetadata("Card", "", "")],
-    ["ConstraintLayout", new JetpackComposeMetadata("ConstraintLayout", "", "")],
+    ["ConstraintLayout", new JetpackComposeMetadata("Constraint Layout", "", "")],
     ["EditText", new JetpackComposeMetadata("TextField", "", "")],
     ["FrameLayout", new JetpackComposeMetadata("Stack", "", "")],
     ["EditText", new JetpackComposeMetadata("TextField", "", "")],

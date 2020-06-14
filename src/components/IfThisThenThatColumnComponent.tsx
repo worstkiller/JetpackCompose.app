@@ -160,7 +160,7 @@ export const useStyles = makeStyles<Theme>((theme: Theme) => ({
             fontSize: 40,
         },
         [theme.breakpoints.down("sm")]: {
-            fontSize: 25,
+            fontSize: 30,
         },
         color: "#9e9e9e",
         marginBottom: 100,
@@ -174,7 +174,7 @@ export const useStyles = makeStyles<Theme>((theme: Theme) => ({
             fontSize: 40,
         },
         [theme.breakpoints.down("sm")]: {
-            fontSize: 25,
+            fontSize: 30,
         },
         color: "#558b2f",
         fontWeight: "bold",
@@ -231,16 +231,3 @@ export const useStyles = makeStyles<Theme>((theme: Theme) => ({
         fontFamily: "Playfair Display",
       },
 }));
-
-// const useStyles = makeStyles({
-  
-// });
-
-const styles = (theme: { breakpoints: { up: (arg0: string) => any; }; }) => ({
-    root: {
-      backgroundColor: 'blue',
-      [theme.breakpoints.up('md')]: {
-        backgroundColor: 'red',
-      },
-    },
-  });
