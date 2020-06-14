@@ -7,9 +7,11 @@ import JetpackComposeMetadata from "../models/JetpackComposeMetadata";
 import Link from "@material-ui/core/Link";
 import React, { FunctionComponent } from "react";
 import TextField from "@material-ui/core/TextField";
-import { Theme } from '@material-ui/core';
+import { Theme } from "@material-ui/core";
 import { ThemeProvider, ClassNameMap } from "@material-ui/styles";
 import Typography from "@material-ui/core/Typography";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 interface IfThisThenThanColumnComponentProps {
   prefix: string;
@@ -33,6 +35,8 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
 ) => {
   const classes = useStyles();
   const classicAndroid = Array.from(classicAndroidVsJetpackComposeMap.keys());
+  const theme = useTheme();
+  const breakpointUpLg: boolean = useMediaQuery(theme.breakpoints.up("lg"));
 
   return (
     <>
@@ -84,11 +88,19 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
               className={classes.composableValue}
             >
               {props.selectedKey === "" ? (
-                <div>
-                  <span role="img" aria-label="Pointing in Left Direction">
-                    👈
-                  </span>
-                </div>
+                breakpointUpLg ? (
+                  <div>
+                    <span role="img" aria-label="Pointing in Left Direction">
+                      👈
+                    </span>
+                  </div>
+                ) : (
+                  <div>
+                    <span role="img" aria-label="Pointing in Up Direction">
+                      ☝️
+                    </span>
+                  </div>
+                )
               ) : (
                 props.map.get(props.selectedKey)?.composableName
               )}
@@ -148,86 +160,86 @@ function getTypographyClass(
 }
 
 export const useStyles = makeStyles<Theme>((theme: Theme) => ({
-    boxCenter: {
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      },
-      typographyKey: {
-        fontSize: 50,
-        [theme.breakpoints.down("md")]: {
-            fontSize: 40,
-        },
-        [theme.breakpoints.down("sm")]: {
-            fontSize: 30,
-        },
-        color: "#9e9e9e",
-        marginBottom: 100,
-        marginTop: 100,
-        fontWeight: "bold",
-        fontFamily: "Limelight",
-      },
-      typographyValue: {
-        fontSize: 50,
-        [theme.breakpoints.down("md")]: {
-            fontSize: 40,
-        },
-        [theme.breakpoints.down("sm")]: {
-            fontSize: 30,
-        },
-        color: "#558b2f",
-        fontWeight: "bold",
-        fontFamily: "Limelight",
-      },
-      linkSection: {
-          marginTop: "10%"
-      },
-      link: {
-        fontSize: 18,
-        [theme.breakpoints.down("md")]: {
-            fontSize: 14,
-        },
-        fontFamily: "Playfair Display",
-        color: "#33691e",
-      },
-      autocompleteBox: {
-        width: "80%",
-      },
-      inputTextField: {
-        fontSize: 70,
-        [theme.breakpoints.down("md")]: {
-            fontSize: 50,
-        },
-        [theme.breakpoints.down("sm")]: {
-            fontSize: 40,
-        },
-        textAlign: "center",
-        fontWeight: "bolder",
-        fontFamily: "Playfair Display",
-      },
-      composableValue: {
-        fontSize: 70,
-        [theme.breakpoints.down("md")]: {
-            fontSize: 50,
-        },
-        [theme.breakpoints.down("sm")]: {
-            fontSize: 40,
-        },
-        textAlign: "center",
-        fontWeight: "bolder",
-        fontFamily: "Playfair Display",
-        marginBottom: 100,
-        marginTop: 100,
-      },
-      dropdownOptions: {
-        fontSize: 50,
-        [theme.breakpoints.down("md")]: {
-            fontSize: 40,
-        },
-        [theme.breakpoints.down("sm")]: {
-            fontSize: 30,
-        },
-        fontFamily: "Playfair Display",
-      },
+  boxCenter: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  typographyKey: {
+    fontSize: 50,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 40,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 30,
+    },
+    color: "#9e9e9e",
+    marginBottom: 100,
+    marginTop: 100,
+    fontWeight: "bold",
+    fontFamily: "Limelight",
+  },
+  typographyValue: {
+    fontSize: 50,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 40,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 30,
+    },
+    color: "#558b2f",
+    fontWeight: "bold",
+    fontFamily: "Limelight",
+  },
+  linkSection: {
+    marginTop: "10%",
+  },
+  link: {
+    fontSize: 18,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 14,
+    },
+    fontFamily: "Playfair Display",
+    color: "#33691e",
+  },
+  autocompleteBox: {
+    width: "80%",
+  },
+  inputTextField: {
+    fontSize: 70,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 50,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 40,
+    },
+    textAlign: "center",
+    fontWeight: "bolder",
+    fontFamily: "Playfair Display",
+  },
+  composableValue: {
+    fontSize: 70,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 50,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 40,
+    },
+    textAlign: "center",
+    fontWeight: "bolder",
+    fontFamily: "Playfair Display",
+    marginBottom: 100,
+    marginTop: 100,
+  },
+  dropdownOptions: {
+    fontSize: 50,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 40,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 30,
+    },
+    fontFamily: "Playfair Display",
+  },
 }));
