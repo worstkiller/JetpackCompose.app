@@ -21,7 +21,7 @@ export default function IfTHisThenThatFooter() {
         <Link
           className={classes.footerText}
           variant="subtitle1"
-          href="https://www.twitter.com/vinaygaba"
+          href="https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example"
         >
           Powered by <span className={classes.link}>Learn Jetpack Compose By Example</span>
         </Link>

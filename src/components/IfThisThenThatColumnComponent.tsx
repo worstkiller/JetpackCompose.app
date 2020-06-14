@@ -80,7 +80,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
             <Typography
               variant="h4"
               align="center"
-              className={classes.inputTextField}
+              className={classes.composableValue}
             >
               {props.selectedKey === "" ? (
                 <div>
@@ -107,13 +107,15 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
         {props.componentType === IfThisThenThatColumnComponentType.VALUE &&
         props.selectedKey !== "" ? (
           <>
-            <Box>
+            <Box className={classes.linkSection}>
               <Link
                 variant="overline"
                 className={classes.link}
                 href={props.map.get(props.selectedKey)?.composableGithubLink}
               >
-                🤩 Here is an example to help you get started 🤩
+                {props.map.get(props.selectedKey)?.composableGithubLink === ""
+                  ? "⌛ Example coming soon! ⌛"
+                  : "🤩 Here is an example to help you get started 🤩"}
               </Link>
             </Box>
 
@@ -135,8 +137,13 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
   );
 };
 
-function getTypographyClass(componentType: IfThisThenThatColumnComponentType, classes: ClassNameMap) {
-    return componentType === IfThisThenThatColumnComponentType.KEY ? classes.typographyKey : classes.typographyValue
+function getTypographyClass(
+  componentType: IfThisThenThatColumnComponentType,
+  classes: ClassNameMap
+) {
+  return componentType === IfThisThenThatColumnComponentType.KEY
+    ? classes.typographyKey
+    : classes.typographyValue;
 }
 
 const useStyles = makeStyles({
@@ -147,7 +154,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   typographyKey: {
-    fontSize: 55,
+    fontSize: 50,
     color: "#9e9e9e",
     marginBottom: 100,
     marginTop: 100,
@@ -155,12 +162,13 @@ const useStyles = makeStyles({
     fontFamily: "Limelight",
   },
   typographyValue: {
-    fontSize: 55,
+    fontSize: 50,
     color: "#558b2f",
-    marginBottom: 100,
-    marginTop: 100,
     fontWeight: "bold",
     fontFamily: "Limelight",
+  },
+  linkSection: {
+      marginTop: "10%"
   },
   link: {
     fontSize: 18,
@@ -175,6 +183,14 @@ const useStyles = makeStyles({
     textAlign: "center",
     fontWeight: "bolder",
     fontFamily: "Playfair Display",
+  },
+  composableValue: {
+    fontSize: 70,
+    textAlign: "center",
+    fontWeight: "bolder",
+    fontFamily: "Playfair Display",
+    marginBottom: 100,
+    marginTop: 100,
   },
   dropdownOptions: {
     fontSize: 50,
