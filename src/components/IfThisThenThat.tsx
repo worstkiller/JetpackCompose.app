@@ -30,11 +30,11 @@ export default function IfThisThenThatComponent() {
     <div className={classes.root}>
       <Helmet>
         <title>
-          JetpackCompose.app What's the equivalent of {androidParam ? androidParam : ""} in Jetpack Compose?
+          What's the equivalent of {androidParam ? androidParam : ""} in Jetpack Compose?
         </title>
         <meta
           name="description"
-          content="Custom content"
+          content="Learn more about using Jetpack Compose in Android. How does Jetpack Compose compare to the existing Android UI Toolkit?"
         />
       </Helmet>
       <Grid container className={classes.root} spacing={2}>
