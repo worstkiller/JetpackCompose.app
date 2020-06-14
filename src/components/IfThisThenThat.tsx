@@ -30,7 +30,7 @@ export default function IfThisThenThatComponent() {
     <div className={classes.root}>
       <Helmet>
         <title>
-          JetpackCompose.app: What's the equivalent of {androidParam} in Jetpack Compose?
+          JetpackCompose.app What's the equivalent of {androidParam ? androidParam : ""} in Jetpack Compose?
         </title>
         <meta
           name="description"
