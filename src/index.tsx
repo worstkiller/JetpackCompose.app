@@ -7,8 +7,8 @@ export default function JetpackComposeApp() {
   return (
     <Router>
       <Switch>
-        <Route path="/What-is-the-equivalent-of-:androidParam-in-Jetpack-Compose" render={(props) => <IfThisThenThatComponent />}>
-        </Route>
+        <Route path="/What-is-the-equivalent-of-:androidParam-in-Jetpack-Compose" render={(props) => <IfThisThenThatComponent />} />
+        <Route path="/:androidParam" render={(props) => <IfThisThenThatComponent />} />
         <Route path="/">
           <IfThisThenThatComponent />
         </Route>
