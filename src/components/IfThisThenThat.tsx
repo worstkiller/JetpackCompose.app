@@ -1,5 +1,6 @@
 import classicAndroidVsJetpackComposeMap from "../utils/Data";
 import Grid from "@material-ui/core/Grid";
+import { Helmet } from "react-helmet";
 import { makeStyles } from "@material-ui/core/styles";
 import { IfThisThenThanColumnComponent } from "./IfThisThenThatColumnComponent";
 import IfThisThenThatColumnComponentType from "../models/IfThisThenThatColumnComponentType";
@@ -27,6 +28,15 @@ export default function IfThisThenThatComponent() {
 
   return (
     <div className={classes.root}>
+      <Helmet>
+        <title>
+          JetpackCompose.app: What's the equivalent of {androidParam} in Jetpack Compose?
+        </title>
+        <meta
+          name="description"
+          content="Custom content"
+        />
+      </Helmet>
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12} lg={6} className={classes.firstColumn}>
           <IfThisThenThanColumnComponent
