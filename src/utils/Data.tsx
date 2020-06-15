@@ -76,9 +76,9 @@ const classicAndroidVsJetpackComposeMap = new Map([
   [
     "Dark Mode",
     new JetpackComposeMetadata(
-      "Constraint Layout",
+      "isSystemInDarkTheme()",
       "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/theme/DarkModeActivity.kt",
-      "https://developer.android.com/reference/kotlin/androidx/ui/material/package-summary#darkColorPalette(androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color,%20androidx.ui.graphics.Color)"
+      "https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#issystemindarktheme"
     ),
   ],
   [
