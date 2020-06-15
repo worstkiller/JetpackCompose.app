@@ -242,7 +242,7 @@ const classicAndroidVsJetpackComposeMap = new Map([
     ),
   ],
   [
-    "Themes",
+    "Theme.MaterialComponents",
     new JetpackComposeMetadata(
       "MaterialTheme",
       "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/theme/DarkModeActivity.kt",
