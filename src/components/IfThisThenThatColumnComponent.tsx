@@ -126,6 +126,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
                 variant="overline"
                 className={classes.link}
                 href={props.map.get(props.selectedKey)?.composableGithubLink}
+                target="_blank"
               >
                 {props.map.get(props.selectedKey)?.composableGithubLink === ""
                   ? "⌛ Example coming soon! ⌛"
@@ -138,6 +139,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
                 variant="overline"
                 className={classes.link}
                 href={props.map.get(props.selectedKey)?.officialDocsLink}
+                target="_blank"
               >
                 Official Docs
               </Link>

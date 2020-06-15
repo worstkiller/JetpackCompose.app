@@ -12,6 +12,7 @@ export default function IfTHisThenThatFooter() {
           className={classes.footerText}
           variant="subtitle1"
           href="https://www.twitter.com/vinaygaba"
+          target="_blank"
         >
           Made by <span className={classes.link}>Vinay Gaba</span>
         </Link>
@@ -21,6 +22,7 @@ export default function IfTHisThenThatFooter() {
           className={classes.footerText}
           variant="subtitle1"
           href="https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example"
+          target="_blank"
         >
           Powered by <span className={classes.link}>Learn Jetpack Compose By Example</span>
         </Link>
