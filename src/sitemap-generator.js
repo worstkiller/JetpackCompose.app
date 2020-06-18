@@ -259,15 +259,19 @@ const map = new Map([
     ],
   ]);
 
+console.log("<url>")
+console.log("<loc>https://jetpackcompose.app/</loc>")
+console.log("<lastmod>".concat("2020-06-18T10:41:56+00:00").concat("</lastmod>"))
+console.log("</url>")
 
   for (const [key, value] of map.entries()) {
     console.log("<url>")
     console.log("<loc>https://jetpackcompose.app/".concat(key).concat("</loc>"))
-    console.log("<lastmod>".concat("2020-06-18T06:41:56+00:00").concat("</lastmod>"))
+    console.log("<lastmod>".concat("2020-06-18T10:41:56+00:00").concat("</lastmod>"))
     console.log("</url>")
 
     console.log("<url>")
     console.log("<loc>https://jetpackcompose.app/What-is-the-equivalent-of-".concat(key).concat("-in-Jetpack-Compose</loc>"))
-    console.log("<lastmod>".concat("2020-06-18T06:41:56+00:00").concat("</lastmod>"))
+    console.log("<lastmod>".concat("2020-06-18T10:41:56+00:00").concat("</lastmod>"))
     console.log("</url>")
   }
