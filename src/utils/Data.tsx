@@ -196,9 +196,9 @@ const classicAndroidVsJetpackComposeMap = new Map([
   [
     "RecyclerView",
     new JetpackComposeMetadata(
-      "AdapterList",
+      "LazyColumnItems",
       "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/scrollers/VerticalScrollableActivity.kt",
-      "https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#adapterlist"
+      "https://developer.android.com/reference/kotlin/androidx/ui/foundation/lazy/package-summary#LazyColumnItems"
     ),
   ],
   [
