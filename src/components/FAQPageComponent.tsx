@@ -25,6 +25,9 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
             <Typography className={classes.pageHeader} align="center">
                 Frequently Asked Questions
             </Typography>
+            <Typography className={classes.pageSubheader} align="center">
+                 Find answers to frequently asked questions about Jetpack Compose! 
+            </Typography>
             {props.listOfQnA.map((qna) => (
                 <Accordion>
                 <AccordionSummary
@@ -58,8 +61,15 @@ const useStyles = makeStyles({
     pageHeader: {
         fontSize: 30,
         fontFamily: "Playfair Display",
-        marginBottom: "2%"
+        marginBottom: "2%",
+        color: "#78C257"
     },
+    pageSubheader: {
+      fontSize: 20,
+      fontWeight: "lighter",
+      fontFamily: "Roboto",
+      marginBottom: "2%"
+  },
     question: {
         fontSize: 20,
         fontFamily: "Playfair Display",
@@ -69,7 +79,7 @@ const useStyles = makeStyles({
         fontFamily: "Roboto",
         '& a': {
           color: "#33691e"
-        }
+        },
     },
     footer: {
         marginTop:"2%",
