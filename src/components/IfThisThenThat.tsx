@@ -6,7 +6,7 @@ import { IfThisThenThanColumnComponent } from "./IfThisThenThatColumnComponent";
 import IfThisThenThatColumnComponentType from "../models/IfThisThenThatColumnComponentType";
 import IfThisThenThatFooter from "./IfThisThenThatFooter";
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function IfThisThenThatComponent() {
   const classes = useStyles();

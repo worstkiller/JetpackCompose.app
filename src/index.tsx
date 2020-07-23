@@ -2,8 +2,10 @@ import { FAQPageComponent } from "./components/FAQPageComponent";
 import { mockQnA } from "./utils/Data"
 import IfThisThenThatComponent from "./components/IfThisThenThat";
 import React from "react";
-import ReactDOM from "react-dom";
+// @ts-ignore
+import { render } from 'react-snapshot';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 export default function JetpackComposeApp() {
   return (
@@ -14,6 +16,9 @@ export default function JetpackComposeApp() {
       render={(props) => <IfThisThenThatComponent />}
     />
     <Route path="/faq">
+      <FAQPageComponent listOfQnA={mockQnA}/>
+    </Route>
+    <Route path="/faqs">
       <FAQPageComponent listOfQnA={mockQnA}/>
     </Route>
     <Route
@@ -28,4 +33,4 @@ export default function JetpackComposeApp() {
   );
 }
 
-ReactDOM.render(<JetpackComposeApp />, document.getElementById("root"));
+render(<JetpackComposeApp />, document.getElementById("root"));
