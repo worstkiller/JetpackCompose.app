@@ -3,6 +3,7 @@ import AccordionSummary from "@material-ui/core/ExpansionPanelSummary";
 import AccordionDetails from "@material-ui/core/ExpansionPanelDetails";
 import Container from "@material-ui/core/Container";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { Helmet } from "react-helmet";
 import IfThisThenThatFooter from "./IfThisThenThatFooter";
 import { makeStyles } from "@material-ui/core/styles";
 import parse from 'html-react-parser';
@@ -21,6 +22,33 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
 
     return (
     <div className={classes.root}>
+        <Helmet>
+          <title>
+            Jetpack Compose: Frequently Asked Questions
+          </title>
+          <meta
+            name="description"
+            content="Find answers to frequently asked questions about Jetpack Compose!"
+          />
+          <meta
+            name="description"
+            content="Find answers to frequently asked questions about Jetpack Compose!"
+          />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://jetpackcompose.app/faq" />
+          <meta
+            property="twitter:title"
+            content="Jetpack Compose: Frequently Asked Questions"
+          />
+          <meta
+            property="twitter:description"
+            content="Find answers to frequently asked questions about Jetpack Compose!"
+          />
+          <meta
+            property="twitter:image"
+            content="https://jetpackcompose.app/faq_poster.png"
+          />
+        </Helmet>
         <Container maxWidth="md">
             <Typography className={classes.pageHeader} align="center">
                 Frequently Asked Questions
