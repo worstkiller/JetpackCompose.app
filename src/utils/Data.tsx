@@ -305,6 +305,16 @@ export const mockQnA: Array<QnA>  = [
     "@Composable is the secret sauce for Jetpack Compose and it is the most fundamental building block. Annotating a function with @Composable allows that function to describe UI in Compose. This annotation is needed because Compose uses a custom kotlin compiler to function. This custom compiler does some post-processing to each @Composable function and changes its definition at compile time"
   ),
   new QnA(
+    "What kind of tooling is available with Compose?", 
+    "<p>Android Studio lets you preview your composable functions within the IDE itself, instead of needing to download the app to an Android device or emulator. This is a fantastic feature as you can preview all your custom components(read composable functions) from the comforts of the IDE.</p>" +
+    
+    "<p>The main restriction is, the composable function must not take any parameters. If your composable function requires a parameter, you can simply wrap your component inside another composable function that doesn't take any parameters and call your composable function with the appropriate params. Also, don't forget to annotate it with @Preview & @Composable annotations. </p>"+
+    
+    "<p>In addition, you can also deploy a composable function directly to your device for quickly testing it as you are developing it.Lastly, Android Studio even lets you interact with the components right from Android Studio.</p>" +
+    
+    "<p><img src='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/raw/master/screenshots/compose_preview.gif' /></p>"
+  ),
+  new QnA(
     "How will I use view models and live data with Compose?", 
     "You can continue to use View Models and Live Data with Compose if it fits your use case. Here is an <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/state/livedata/LiveDataActivity.kt'>example</a> to help you."
   ),
@@ -337,10 +347,10 @@ export const mockQnA: Array<QnA>  = [
     "<p>A lot of widgets that adhere to the material design specification are already available in Compose. <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/material/MaterialActivity.kt'>Here are some implementations of the Material Design widgets.</a></p>" +
     "<p><img src='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/raw/master/screenshots/material_design_components.gif' /></p>"
   ),
-  // new QnA(
-  //   "How does navigation work in Compose?", 
-  //   "TODO"
-  // ),
+  new QnA(
+    "How does navigation work in Compose?", 
+    "Navigation support hasn't been added to Compose yet. However, it is expected that it is going to be compatible with <a href=''https://developer.android.com/guide/navigation/navigation-getting-started>Navigation Component</a>."
+  ),
   // new QnA(
   //   "All examples show a lot of nested composables? Isn't nesting views a bad thing?", 
   //   "TODO"
@@ -359,10 +369,6 @@ export const mockQnA: Array<QnA>  = [
   // ),
   // new QnA(
   //   "How do animations work in Compose?", 
-  //   "TODO"
-  // ),
-  // new QnA(
-  //   "What kind of tooling is available with Compose?", 
   //   "TODO"
   // ),
 ];
