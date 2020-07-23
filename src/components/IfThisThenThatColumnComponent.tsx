@@ -1,6 +1,6 @@
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { Box } from "@material-ui/core";
-import classicAndroidVsJetpackComposeMap from "../utils/Data";
+import { classicAndroidVsJetpackComposeMap } from "../utils/Data";
 import { createMuiTheme, makeStyles } from "@material-ui/core/styles";
 import IfThisThenThatColumnComponentType from "../models/IfThisThenThatColumnComponentType";
 import JetpackComposeMetadata from "../models/JetpackComposeMetadata";

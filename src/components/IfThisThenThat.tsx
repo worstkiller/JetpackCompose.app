@@ -1,4 +1,4 @@
-import classicAndroidVsJetpackComposeMap from "../utils/Data";
+import { classicAndroidVsJetpackComposeMap } from "../utils/Data";
 import Grid from "@material-ui/core/Grid";
 import { Helmet } from "react-helmet";
 import { makeStyles } from "@material-ui/core/styles";

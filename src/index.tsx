@@ -1,3 +1,5 @@
+import { FAQPageComponent } from "./components/FAQPageComponent";
+import { mockQnA } from "./utils/Data"
 import IfThisThenThatComponent from "./components/IfThisThenThat";
 import React from "react";
 import ReactDOM from "react-dom";
@@ -11,6 +13,9 @@ export default function JetpackComposeApp() {
       path="/What-is-the-equivalent-of-:androidParam-in-Jetpack-Compose"
       render={(props) => <IfThisThenThatComponent />}
     />
+    <Route path="/faq">
+      <FAQPageComponent listOfQnA={mockQnA}/>
+    </Route>
     <Route
       path="/:androidParam"
       render={(props) => <IfThisThenThatComponent />}
