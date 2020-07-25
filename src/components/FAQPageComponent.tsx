@@ -57,7 +57,7 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
                  Find answers to frequently asked questions about Jetpack Compose! 
             </Typography>
             <Typography className={classes.lastUpdated} align="center">
-                 Last updated: 24th July, 2020
+                 Last updated: 25th July, 2020
             </Typography>
             {props.listOfQnA.map((qna) => (
                 <Accordion>
@@ -66,7 +66,7 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography className={classes.question}>{qna.question}</Typography>
+                  <Typography className={classes.question}>{parse(qna.question)}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className={classes.answer}>
@@ -108,6 +108,9 @@ const useStyles = makeStyles({
     question: {
         fontSize: 20,
         fontFamily: "Playfair Display",
+        '& span': {
+          fontSize: 14,
+        },
     },
     answer: {
         fontSize: 18,
