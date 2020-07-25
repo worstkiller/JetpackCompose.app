@@ -337,7 +337,7 @@ export const mockQnA: Array<QnA>  = [
   ),
   new QnA(
     "How does one handle orientation changes in Compose? <span id='contribution'>(Contributed by <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klippenstein</a>)</span>", 
-    "One of the advantages of declarative programming is that you can model these changes through control flow. In order to different UI based on the size of the screen or the orientation, you can simply us an <b>if condition</b> to handle these changes."
+    "One of the advantages of declarative programming is that you can model these changes through control flow. In order to change UI based on the size of the screen or the orientation, you can simply us an <b>if condition</b> to handle these changes."
   ),
   new QnA(
     "Does Compose work with WearOS?", 
