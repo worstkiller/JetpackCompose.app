@@ -332,7 +332,7 @@ export const mockQnA: Array<QnA>  = [
   ),
   new QnA(
     "Can I use the existing Android Views in Jetpack Compose?", 
-    "Yes you can use existing Android Views and custom views in Compose. <a target='_blank' href=''>Here is an example</a> of what the implementation looks like."
+    "Yes you can use existing Android Views and custom views in Compose. <a target='_blank' href='https://speakerdeck.com/vinaygaba/360-andev-2020-learning-jetpack-compose-by-example?slide=89'>Here is an example</a> of what the implementation looks like."
   ),
   new QnA(
     "Can I use Jetpack Compose in the existing screens of my app?", 
