@@ -111,6 +111,9 @@ const useStyles = makeStyles({
         '& span': {
           fontSize: 14,
         },
+        '& a': {
+          color: "#33691e"
+        },
     },
     answer: {
         fontSize: 18,
