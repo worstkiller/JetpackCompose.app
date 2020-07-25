@@ -38,7 +38,7 @@ function NavigationBar(props: IProps) {
           }}
           onChange={handleChange}
           aria-label="simple tabs example"
-          centered
+          variant="scrollable"
         >
             <Tab label="Which Compose API to use?" {...a11yProps(0)} className={classes.tab} value="/" />
             <Tab label="Frequently Asked Questions" {...a11yProps(1)} className={classes.tab} value="/faq" />
