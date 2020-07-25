@@ -25,7 +25,7 @@ function NavigationBar(props: IProps) {
     setValue(value);
   };
 
-  useEffect(() => handleChange("", "/"), []);
+  useEffect(() => handleChange("", props.history.location.pathname), []);
 
   return (
     <div className={classes.root}>
