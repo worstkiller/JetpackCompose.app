@@ -77,7 +77,7 @@ export const classicAndroidVsJetpackComposeMap = new Map([
   [
     "Dark Mode",
     new JetpackComposeMetadata(
-      "isSystemInDarkTheme()",
+      "isSystemInDarkTheme()", 
       "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/theme/DarkModeActivity.kt",
       "https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#issystemindarktheme"
     ),
@@ -144,6 +144,14 @@ export const classicAndroidVsJetpackComposeMap = new Map([
       "Modifier.drawShadow",
       "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/material/ShadowActivity.kt",
       "https://developer.android.com/reference/kotlin/androidx/ui/core/package-summary#drawshadow"
+    ),
+  ],
+  [
+    "layer_margin",
+    new JetpackComposeMetadata(
+      "Modifier.padding",
+      "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/layout/LayoutModifierActivity.kt#L51",
+      "https://developer.android.com/reference/kotlin/androidx/ui/core/Modifier"
     ),
   ],
   [
