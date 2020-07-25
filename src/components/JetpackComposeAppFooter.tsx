@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   footerText: {
-    fontSize: 15,
+    fontSize: 18,
     color: "#FFFFFF",
     fontFamily: "Playfair Display",
   },
