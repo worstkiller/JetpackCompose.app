@@ -4,7 +4,7 @@ import AccordionDetails from "@material-ui/core/ExpansionPanelDetails";
 import Container from "@material-ui/core/Container";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Helmet } from "react-helmet";
-import IfThisThenThatFooter from "./IfThisThenThatFooter";
+import JetpackComposeAppFooter from "./JetpackComposeAppFooter";
 import { makeStyles } from "@material-ui/core/styles";
 import parse from 'html-react-parser';
 import QnA from "../models/QnA"
@@ -24,7 +24,7 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
     <div className={classes.root}>
         <Helmet>
           <title>
-            Jetpack Compose: Frequently Asked Questions
+          Frequently Asked Questions about Jetpack Compose
           </title>
           <meta
             name="description"
@@ -38,7 +38,7 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
           <meta property="twitter:url" content="https://jetpackcompose.app/faq" />
           <meta
             property="twitter:title"
-            content="Jetpack Compose: Frequently Asked Questions"
+            content="Frequently Asked Questions about Jetpack Compose"
           />
           <meta
             property="twitter:description"
@@ -55,6 +55,9 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
             </Typography>
             <Typography className={classes.pageSubheader} align="center">
                  Find answers to frequently asked questions about Jetpack Compose! 
+            </Typography>
+            <Typography className={classes.lastUpdated} align="center">
+                 Last updated: 24th July, 2020
             </Typography>
             {props.listOfQnA.map((qna) => (
                 <Accordion>
@@ -75,7 +78,7 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
         </Container>
 
         <div className={classes.footer}>
-        <IfThisThenThatFooter/>
+        <JetpackComposeAppFooter/>
         </div>
     </div>
     )
@@ -96,8 +99,12 @@ const useStyles = makeStyles({
       fontSize: 20,
       fontWeight: "lighter",
       fontFamily: "Roboto",
+    },
+    lastUpdated: {
+      fontSize: 15,
+      fontFamily: "Playfair Display",
       marginBottom: "2%"
-  },
+    },
     question: {
         fontSize: 20,
         fontFamily: "Playfair Display",

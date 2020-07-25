@@ -3,7 +3,7 @@ import Link from "@material-ui/core/Link";
 import React from "react";
 import { Box } from "@material-ui/core";
 
-export default function IfTHisThenThatFooter() {
+export default function JetpackComposeAppFooter() {
   const classes = useStyles();
   return (
     <Box display="flex" flexDirection="column" className={classes.root}>

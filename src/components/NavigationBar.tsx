@@ -1,15 +1,12 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
+import { withRouter } from "react-router-dom";
 
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: any;
-  value: any;
+interface IProps {
+  history?: any
 }
 
 function a11yProps(index: any) {
@@ -19,33 +16,32 @@ function a11yProps(index: any) {
   };
 }
 
-export default function NavigationBar() {
+function NavigationBar(props: IProps) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
+  const handleChange = (event: any, value: any) => {
+    props.history.push(value);
+    setValue(value);
   };
+
+  useEffect(() => handleChange("", "/"), []);
 
   return (
     <div className={classes.root}>
-      <Paper square>
+      <Paper square className={classes.header}>
         <Tabs
           value={value}
-          indicatorColor="primary"
-          textColor="primary"
+          className={classes.tabs}
+          classes={{
+            indicator: classes.tabsIndicator
+          }}
           onChange={handleChange}
           aria-label="simple tabs example"
+          centered
         >
-          <Link to="/">
-            <Tab label="Composables" {...a11yProps(0)} />
-          </Link>
-          <Link to="/blogs">
-            <Tab label="Blogs/Articles" {...a11yProps(1)} />
-          </Link>
-          <Link to="/videos">
-            <Tab label="Videos" {...a11yProps(2)} />
-          </Link>
+            <Tab label="Which Compose API to use?" {...a11yProps(0)} className={classes.tab} value="/" />
+            <Tab label="Frequently Asked Questions" {...a11yProps(1)} className={classes.tab} value="/faq" />
         </Tabs>
       </Paper>
     </div>
@@ -53,5 +49,29 @@ export default function NavigationBar() {
 }
 
 const useStyles = makeStyles({
-  root: {},
+  root: {
+    flexGrow: 1,
+  },
+  header: {
+    backgroundColor:"#000000",
+  },
+  tabs: {
+    height: "10vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  tabsIndicator: {
+    backgroundColor:"#ccff90",
+  },
+  tab: {
+    color:"#FFFFFF",
+    fontSize: 15,
+    fontWeight: "bolder",
+  },
+  typography: {
+    color: "#FFFFFF"
+  }
 });
+
+export default withRouter(NavigationBar)

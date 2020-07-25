@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import { makeStyles } from "@material-ui/core/styles";
 import { IfThisThenThanColumnComponent } from "./IfThisThenThatColumnComponent";
 import IfThisThenThatColumnComponentType from "../models/IfThisThenThatColumnComponentType";
-import IfThisThenThatFooter from "./IfThisThenThatFooter";
+import JetpackComposeAppFooter from "./JetpackComposeAppFooter";
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
@@ -59,7 +59,7 @@ export default function IfThisThenThatComponent() {
           />
         </Grid>
         <Grid item xs={12} className={classes.footer}>
-          <IfThisThenThatFooter />
+          <JetpackComposeAppFooter />
         </Grid>
       </Grid>
     </div>
@@ -69,6 +69,7 @@ export default function IfThisThenThatComponent() {
 const useStyles = makeStyles({
   root: {
     width: "100%",
+    marginTop:"0%"
   },
   firstColumn: {
     background: "#FFFFFF",
