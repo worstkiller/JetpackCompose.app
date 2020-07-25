@@ -291,8 +291,9 @@ export const mockQnA: Array<QnA>  = [
     "<p><b>Simple things still require a lot of code</b><br/>We are used to writing a lot of code for even doing simple things. We just spoke about the normal workflow where we are making changes across so many files. Even outside of that, we have so many moving pieces that we need to take care of for writing UI code. Want to make a simple list, you create an adapter first, make sure that it extends the right class, override the relevant methods, If your list supports types of views items, then you override an additional method to pass the relevant layout xml file. So there's a lot of boilerplate code that we have to write for even doing simple things. The most effective way to reduce the number of bugs is to reduce the amount of code that we write. </p>"
   ),
   new QnA(
-    "Where can I see examples to learn about Jetpack Compose?", 
-    "If you haven't already noticed, here is another shameless 🔌- <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example'>Learn Jetpack Compose By Example</a>"
+    "Where can I see examples to learn about Jetpack Compose? <span id='contribution'>(Edits by <a href='https://twitter.com/brettbestaus' target='_blank'>Brett Best</a>)</span>", 
+    "<p>If you haven't already noticed, here is another shameless 🔌- <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example'>Learn Jetpack Compose By Example</a></p>" +
+    "<p>Another project that is worth checking out is <a target='_blank' href='https://github.com/hitherejoe/ComposeAcademy-Playground '>Compose Academy</a></p>"
   ),
   new QnA(
     "How do I learn about the equivalent API for common Android tasks in Jetpack Compose?", 
