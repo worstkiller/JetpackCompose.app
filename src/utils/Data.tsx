@@ -147,7 +147,7 @@ export const classicAndroidVsJetpackComposeMap = new Map([
     ),
   ],
   [
-    "layer_margin",
+    "layout_margin",
     new JetpackComposeMetadata(
       "Modifier.padding",
       "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/layout/LayoutModifierActivity.kt#L51",
