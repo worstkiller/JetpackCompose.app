@@ -328,7 +328,7 @@ export const mockQnA: Array<QnA>  = [
     "You can continue to use View Models and Live Data with Compose if it fits your use case. Here is an <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/state/livedata/LiveDataActivity.kt'>example</a> to help you."
   ),
   new QnA(
-    "How will Dagger/Hilt fit in with Compose? Can I inject a Composable function? <span id='contribution'>(Contributed by <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klipp</a>)</span>", 
+    "How will Dagger/Hilt fit in with Compose? Can I inject a Composable function? <span id='contribution'>(Contributed by <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klippenstein</a>)</span>", 
     "<p>For apps that are fully Compose top-to-bottom, you could just consider providing your dependencies directly via function parameters, lambdas/lexical scope, or using <a href='https://developer.android.com/reference/kotlin/androidx/compose/Ambient'>Ambients</a> directly when necessary.</p>" +
 
     "<p>One of the best practices for Compose apps is that UI should be defined in terms of pure data and event callbacks and not have many heavy external dependencies in the first place, so it would maybe be concerning that if UI has a very complex dependency graph it probably isn't separated from business and other non-UI logic as cleanly as it should be.</p>" +
@@ -336,7 +336,7 @@ export const mockQnA: Array<QnA>  = [
     "<p>Using dependency injection can potentially be useful in a mixed codebase that is being migrated to compose, but even then it would probably be cleaner to provide dependencies to the UI in a more Compose-idiomatic way at the boundary between legacy code and compose code</p>"
   ),
   new QnA(
-    "How does one handle orientation changes in Compose? <span id='contribution'>(Contributed by <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klipp</a>)</span>", 
+    "How does one handle orientation changes in Compose? <span id='contribution'>(Contributed by <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klippenstein</a>)</span>", 
     "One of the advantages of declarative programming is that you can model these changes through control flow. In order to different UI based on the size of the screen or the orientation, you can simply us an <b>if condition</b> to handle these changes."
   ),
   new QnA(
@@ -369,7 +369,7 @@ export const mockQnA: Array<QnA>  = [
     "<p><img src='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/raw/master/screenshots/material_design_components.gif' /></p>"
   ),
   new QnA(
-    "How does navigation work in Compose? <span id='contribution'>(Edits by <a href='https://twitter.com/brettbestaus' target='_blank'>Brett Best</a>, <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klipp</a>)</span>", 
+    "How does navigation work in Compose? <span id='contribution'>(Edits by <a href='https://twitter.com/brettbestaus' target='_blank'>Brett Best</a>, <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klippenstein</a>)</span>", 
     "<p>Navigation support hasn't been added to Compose yet. However, it is expected that it is going to be compatible with <a href='https://developer.android.com/guide/navigation/navigation-getting-started'>Navigation Component</a>.</p>" + 
     "<p>Having said that, there have been some attempts made by the community to create a navigation library for Compose - <a href='https://github.com/zsoltk/compose-router'>Compose Router</a></p>"
   ),
