@@ -71,7 +71,7 @@ const useStyles = makeStyles({
   logoText: {
     fontSize: 22,
     fontFamily: "Libre Baskerville",
-    color: "#FFFFFF",
+    color: "#CCFF90",
   },
   tabs: {
     height: "10vh",
