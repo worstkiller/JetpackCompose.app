@@ -3,7 +3,9 @@ import Paper from "@material-ui/core/Paper";
 import React, { useState, useEffect } from "react";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
 import { withRouter } from "react-router-dom";
+import { Link } from "@material-ui/core";
 
 interface IProps {
   history?: any
@@ -40,6 +42,7 @@ function NavigationBar(props: IProps) {
           aria-label="simple tabs example"
           variant="scrollable"
         >
+            <Link href="/" className={classes.logo}><Typography className={classes.logoText}>🚀 JetpackCompose.app</Typography></Link>
             <Tab label="Which Compose API to use?" {...a11yProps(0)} className={classes.tab} value="/" />
             <Tab label="Frequently Asked Questions" {...a11yProps(1)} className={classes.tab} value="/faq" />
         </Tabs>
@@ -54,6 +57,21 @@ const useStyles = makeStyles({
   },
   header: {
     backgroundColor:"#000000",
+  },
+  logo: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: "8%",
+    marginLeft: "10%",
+    "&:hover": {
+      textDecoration: "none",
+    },
+  },
+  logoText: {
+    fontSize: 22,
+    fontFamily: "Libre Baskerville",
+    color: "#FFFFFF",
   },
   tabs: {
     height: "10vh",

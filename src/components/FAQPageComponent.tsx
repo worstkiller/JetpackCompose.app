@@ -57,7 +57,7 @@ export const FAQPageComponent: FunctionComponent<FAQPageComponentProps> = (
                  Find answers to frequently asked questions about Jetpack Compose! 
             </Typography>
             <Typography className={classes.lastUpdated} align="center">
-                 Last updated: 25th July, 2020
+                 Last updated: 7th August, 2020
             </Typography>
             {props.listOfQnA.map((qna) => (
                 <Accordion>
@@ -119,7 +119,10 @@ const useStyles = makeStyles({
         fontSize: 18,
         fontFamily: "Roboto",
         '& a': {
-          color: "#33691e"
+          color: "#FFFFFF",
+          background: "#7dbd64",
+          padding: "5px",
+          textDecoration: "none"
         },
     },
     footer: {
