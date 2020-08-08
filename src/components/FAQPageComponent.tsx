@@ -109,10 +109,10 @@ const useStyles = makeStyles({
         fontSize: 20,
         fontFamily: "Playfair Display",
         '& span': {
-          fontSize: 14,
+          fontSize: 16,
         },
         '& a': {
-          color: "#33691e"
+          color: "#81c1eb"
         },
     },
     answer: {
