@@ -263,15 +263,15 @@ export const classicAndroidVsJetpackComposeMap = new Map([
 export const mockQnA: Array<QnA> = [
   new QnA(
     "What's the current status of Jetpack Compose?",
-    "Jetpack Compose is currently in Developer Preview. The API surface is still evolving but there are many people who are experimenting with it and providing feedback. If you'd like to play in role in shaping Jetpack Compose, I would encourage you to join the #compose channel in the <a target='_blank' href='http://slack.kotlinlang.org/'>Kotlin Lang Slack Channel</a>. If you'd like to learn more about Jetpack Compose, I maintain <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example'>this repo</a> that will help you get started!"
+    "Jetpack Compose is currently in Alpha. The API surface is still evolving but there are many people who are experimenting with it and providing feedback. If you'd like to play in role in shaping Jetpack Compose, I would encourage you to join the #compose channel in the <a target='_blank' href='http://slack.kotlinlang.org/'>Kotlin Lang Slack Channel</a>. If you'd like to learn more about Jetpack Compose, I maintain <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example'>this repo</a> that will help you get started!"
   ),
   new QnA(
     "Can I start using Jetpack Compose in production apps",
     "The general recommendation is that if you care about the users of your app, you should wait until a more stable release of Jetpack Compose is available. If its for an internal app, side project or prototypes, you can probably start experimenting with Jetpack Compose."
   ),
   new QnA(
-    "When should I expect the alpha release of Compose?",
-    "An alpha release for Compose is expected in Summer of 2020 as per the last official announcement. I am expecting it to be in August but don't quote me on it 😜"
+    "When should I expect a 1.0 release of Compose?",
+    "An 1.0 release for Compose is expected in 2021 as per the last official announcement."
   ),
   new QnA(
     "Will Fragments be deprecated once Compose is released?",
@@ -288,7 +288,9 @@ export const mockQnA: Array<QnA> = [
   new QnA(
     "Where can I see examples to learn about Jetpack Compose? <span id='contribution'>(Edits by <a href='https://twitter.com/brettbestaus' target='_blank'>Brett Best</a>)</span>",
     "<p>If you haven't already noticed, here is another shameless 🔌- <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example'>Learn Jetpack Compose By Example</a></p>" +
-      "<p>Another project that is worth checking out is <a target='_blank' href='https://github.com/hitherejoe/ComposeAcademy-Playground '>Compose Academy</a></p>"
+      "<p>Another project that is worth checking out is <a target='_blank' href='https://github.com/hitherejoe/ComposeAcademy-Playground '>Compose Academy</a></p>" +
+      "<p>You should also check out the <a target='_blank' href='https://github.com/android/compose-samples'>official samples</a> that are a great way to learn more about Compose.</p>" +
+      "<p>Lastly, consider going through the <a target='_blank' href='https://developer.android.com/courses/pathways/compose'>Jetpack Compose Pathway</a>.</p>"
   ),
   new QnA(
     "How do I learn about the equivalent API for common Android tasks in Jetpack Compose?",
