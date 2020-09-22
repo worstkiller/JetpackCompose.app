@@ -221,7 +221,7 @@ export const classicAndroidVsJetpackComposeMap = new Map([
   [
     "ScrollView",
     new JetpackComposeMetadata(
-      "ScrollableRow/ScrollableColumn",
+      "ScrollableColumn",
       "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/scrollers/HorizontalScrollableActivity.kt",
       "https://developer.android.com/reference/kotlin/androidx/compose/foundation/package-summary#scrollablerow"
     ),

@@ -6,7 +6,7 @@ import { IfThisThenThanColumnComponent } from "./IfThisThenThatColumnComponent";
 import IfThisThenThatColumnComponentType from "../models/IfThisThenThatColumnComponentType";
 import JetpackComposeAppFooter from "./JetpackComposeAppFooter";
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function IfThisThenThatComponent() {
   const classes = useStyles();
@@ -24,13 +24,14 @@ export default function IfThisThenThatComponent() {
     ) {
       setClassicAndroidValue(androidParam);
     }
-  });
+  }, [selectedClassicAndroid, androidParam]);
 
   return (
     <div className={classes.root}>
       <Helmet>
         <title>
-          What's the equivalent of {androidParam ? androidParam : ""} in Jetpack Compose?
+          What's the equivalent of {androidParam ? androidParam : ""} in Jetpack
+          Compose?
         </title>
         <meta
           name="description"
@@ -69,7 +70,7 @@ export default function IfThisThenThatComponent() {
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    marginTop:"0%"
+    marginTop: "0%",
   },
   firstColumn: {
     background: "#FFFFFF",

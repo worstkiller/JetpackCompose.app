@@ -8,7 +8,7 @@ import { withRouter } from "react-router-dom";
 import { Link } from "@material-ui/core";
 
 interface IProps {
-  history?: any
+  history?: any;
 }
 
 function a11yProps(index: any) {
@@ -36,15 +36,35 @@ function NavigationBar(props: IProps) {
           value={value}
           className={classes.tabs}
           classes={{
-            indicator: classes.tabsIndicator
+            indicator: classes.tabsIndicator,
           }}
           onChange={handleChange}
           aria-label="simple tabs example"
           variant="scrollable"
         >
-            <Link href="/" className={classes.logo}><Typography className={classes.logoText}>🚀 JetpackCompose.app</Typography></Link>
-            <Tab label="Which Compose API to use?" {...a11yProps(0)} className={classes.tab} value="/" />
-            <Tab label="Frequently Asked Questions" {...a11yProps(1)} className={classes.tab} value="/faq" />
+          <Link href="/" className={classes.logo}>
+            <Typography className={classes.logoText}>
+              🚀 JetpackCompose.app
+            </Typography>
+          </Link>
+          <Tab
+            label="Which Compose API to use?"
+            {...a11yProps(0)}
+            className={classes.tab}
+            value="/"
+          />
+          <Tab
+            label="Frequently Asked Questions"
+            {...a11yProps(1)}
+            className={classes.tab}
+            value="/faq"
+          />
+          <Tab
+            label="Compose Quick Bites"
+            {...a11yProps(2)}
+            className={classes.tab}
+            value="/quick-bites"
+          />
         </Tabs>
       </Paper>
     </div>
@@ -56,7 +76,7 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
   header: {
-    backgroundColor:"#000000",
+    backgroundColor: "#000000",
   },
   logo: {
     display: "flex",
@@ -80,16 +100,16 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   tabsIndicator: {
-    backgroundColor:"#ccff90",
+    backgroundColor: "#ccff90",
   },
   tab: {
-    color:"#FFFFFF",
+    color: "#FFFFFF",
     fontSize: 15,
     fontWeight: "bolder",
   },
   typography: {
-    color: "#FFFFFF"
-  }
+    color: "#FFFFFF",
+  },
 });
 
-export default withRouter(NavigationBar)
+export default withRouter(NavigationBar);
