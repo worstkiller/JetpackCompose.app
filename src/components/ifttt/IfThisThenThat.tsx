@@ -1,10 +1,10 @@
-import { classicAndroidVsJetpackComposeMap } from "../utils/Data";
+import { classicAndroidVsJetpackComposeMap } from "../../utils/Data";
 import Grid from "@material-ui/core/Grid";
 import { Helmet } from "react-helmet";
 import { makeStyles } from "@material-ui/core/styles";
 import { IfThisThenThanColumnComponent } from "./IfThisThenThatColumnComponent";
-import IfThisThenThatColumnComponentType from "../models/IfThisThenThatColumnComponentType";
-import JetpackComposeAppFooter from "./JetpackComposeAppFooter";
+import IfThisThenThatColumnComponentType from "../../models/IfThisThenThatColumnComponentType";
+import JetpackComposeAppFooter from "../core/JetpackComposeAppFooter";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 

@@ -1,9 +1,9 @@
 import { Box } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
-import { ComponentPreviewCardsSection } from "./ComponentPreviewCardsSection";
-import Header from "./Header";
+import { ComponentPreviewCardsSection } from "../wip/ComponentPreviewCardsSection";
+import Header from "../Header";
 import { makeStyles } from "@material-ui/core/styles";
-import { mockComponentPreviewCardMetadataArray } from "../utils/Mocks";
+import { mockComponentPreviewCardMetadataArray } from "../../utils/Mocks";
 import React from "react";
 
 export default function LandingPageComponent() {

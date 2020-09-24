@@ -4,10 +4,10 @@ import AccordionDetails from "@material-ui/core/ExpansionPanelDetails";
 import Container from "@material-ui/core/Container";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Helmet } from "react-helmet";
-import JetpackComposeAppFooter from "./JetpackComposeAppFooter";
+import JetpackComposeAppFooter from "../core/JetpackComposeAppFooter";
 import { makeStyles } from "@material-ui/core/styles";
 import parse from 'html-react-parser';
-import QnA from "../models/QnA"
+import QnA from "../../models/QnA"
 import React, { FunctionComponent } from "react";
 import Typography from "@material-ui/core/Typography";
 

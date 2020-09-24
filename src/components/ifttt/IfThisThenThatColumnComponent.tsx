@@ -1,9 +1,9 @@
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { Box } from "@material-ui/core";
-import { classicAndroidVsJetpackComposeMap } from "../utils/Data";
+import { classicAndroidVsJetpackComposeMap } from "../../utils/Data";
 import { createMuiTheme, makeStyles } from "@material-ui/core/styles";
-import IfThisThenThatColumnComponentType from "../models/IfThisThenThatColumnComponentType";
-import JetpackComposeMetadata from "../models/JetpackComposeMetadata";
+import IfThisThenThatColumnComponentType from "../../models/IfThisThenThatColumnComponentType";
+import JetpackComposeMetadata from "../../models/JetpackComposeMetadata";
 import Link from "@material-ui/core/Link";
 import React, { FunctionComponent } from "react";
 import TextField from "@material-ui/core/TextField";
@@ -23,12 +23,12 @@ interface IfThisThenThanColumnComponentProps {
 }
 
 const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: "#ccff90",
-      },
+  palette: {
+    primary: {
+      main: "#ccff90",
     },
-  });
+  },
+});
 
 export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColumnComponentProps> = (
   props
@@ -55,14 +55,22 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
             <ThemeProvider theme={theme}>
               <Autocomplete
                 id="combo-box-demo"
-                value={validSelectedKey(props.selectedKey, props.map) ? props.selectedKey: ""}
+                value={
+                  validSelectedKey(props.selectedKey, props.map)
+                    ? props.selectedKey
+                    : ""
+                }
                 options={classicAndroid}
                 classes={{
                   option: classes.dropdownOptions,
                 }}
                 onInputChange={(event, newInputValue) => {
                   props.handleChange(newInputValue);
-                  history.replace("/What-is-the-equivalent-of-" + newInputValue + "-in-Jetpack-Compose")
+                  history.replace(
+                    "/What-is-the-equivalent-of-" +
+                      newInputValue +
+                      "-in-Jetpack-Compose"
+                  );
                 }}
                 getOptionLabel={(option) => option}
                 renderInput={(params) => (

@@ -1,6 +1,6 @@
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import JetpackComposeAppFooter from "./JetpackComposeAppFooter";
+import JetpackComposeAppFooter from "../core/JetpackComposeAppFooter";
 import React from "react";
 import TweetEmbed from "react-tweet-embed";
 import Typography from "@material-ui/core/Typography";

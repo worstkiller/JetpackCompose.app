@@ -1,8 +1,8 @@
-import { FAQPageComponent } from "./components/FAQPageComponent";
+import { FAQPageComponent } from "./components/faq/FAQPageComponent";
 import { mockQnA } from "./utils/Data";
-import NavigationBar from "./components/NavigationBar";
-import IfThisThenThatComponent from "./components/IfThisThenThat";
-import QuickBitesComponent from "./components/QuickBitesComponent";
+import NavigationBar from "./components/core/NavigationBar";
+import IfThisThenThatComponent from "./components/ifttt/IfThisThenThat";
+import QuickBitesComponent from "./components/quickbites/QuickBitesComponent";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
