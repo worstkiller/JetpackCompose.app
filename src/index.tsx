@@ -1,5 +1,7 @@
+import { ComponentPreviewCardsSection } from "./components/wip/ComponentPreviewCardsSection";
 import { FAQPageComponent } from "./components/faq/FAQPageComponent";
 import { mockQnA } from "./utils/Data";
+import { mockComponentPreviewCardMetadataArray } from "./utils/Mocks";
 import NavigationBar from "./components/core/NavigationBar";
 import IfThisThenThatComponent from "./components/ifttt/IfThisThenThat";
 import QuickBitesComponent from "./components/quickbites/QuickBitesComponent";
@@ -22,6 +24,12 @@ export default function JetpackComposeApp() {
           </Route>
           <Route path="/quick-bites">
             <QuickBitesComponent />
+          </Route>
+          <Route path="/wip">
+            <ComponentPreviewCardsSection
+              sectionTitle="title"
+              metadataArray={mockComponentPreviewCardMetadataArray}
+            />
           </Route>
           <Route
             path="/:androidParam"
