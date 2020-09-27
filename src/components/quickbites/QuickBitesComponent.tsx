@@ -22,7 +22,7 @@ export default function QuickBitesComponent() {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container justify="center" spacing={2}>
+          <Grid container justify="center" spacing={2} md>
             <Grid key={"issue1"} item xs={12} md={4}>
               <Typography className={classes.issueTitle} align="center">
                 Issue #1: What is declarative UI?
@@ -34,6 +34,14 @@ export default function QuickBitesComponent() {
                 Issue #2: What is this @Composable thing?
               </Typography>
               <TweetEmbed id="1307528586174160896" />
+            </Grid>
+          </Grid>
+          <Grid container justify="center" spacing={2} md>
+            <Grid key={"issue3"} item xs={12} md={4}>
+              <Typography className={classes.issueTitle} align="center">
+                Issue #3: Why should you care about recomposition?
+              </Typography>
+              <TweetEmbed id="1310042895546609664" />
             </Grid>
           </Grid>
         </Grid>
@@ -65,9 +73,6 @@ const useStyles = makeStyles({
     fontFamily: "Playfair Display",
     marginBottom: "2%",
     marginTop: "5%",
-    color: "#FFFFFF",
-    background: "#81c1eb",
-    padding: "5px",
   },
   footer: {
     marginTop: "2%",
