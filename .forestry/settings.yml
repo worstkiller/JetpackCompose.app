@@ -5,11 +5,11 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
-  path: "./src/data/qna.json"
-  label: FAQ
-- type: document
   path: src/data/ifttt.json
   label: IFTTT
+- type: document
+  path: "./src/data/qna.json"
+  label: FAQ
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
