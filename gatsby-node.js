@@ -13,6 +13,19 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       }
     }
   `);
+  const qnaResult = await graphql(`
+    {
+      allQnaJson {
+        edges {
+          node {
+            question
+            answer
+          }
+        }
+      }
+    }
+  `);
+
   let iftttArrray = [];
   iftttResult.data.allIftttJson.edges.forEach((edges) => {
     const element = edges.node;
@@ -23,9 +36,17 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       documentationUrl: element.documentationUrl,
     });
   });
+
+  let qnaArray = qnaResult.data.allQnaJson.edges.map((edges) => {
+    return edges.node;
+  });
+
   createPage({
     path: "/faq",
     component: require.resolve("./src/components/faq/FAQ.tsx"),
+    context: {
+      qnaArray: qnaArray,
+    },
   });
   createPage({
     path: "/quick-bites",

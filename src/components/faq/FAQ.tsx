@@ -6,16 +6,16 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Helmet } from "react-helmet";
 import JetpackComposeAppFooter from "../core/JetpackComposeAppFooter";
 import { makeStyles } from "@material-ui/core/styles";
-import { mockQnA } from "../../utils/Data";
 import NavigationBar from "../core/NavigationBar";
 import parse from "html-react-parser";
-import QnA from "../../models/QnA";
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { RouteComponentProps } from "@reach/router";
 
 interface FAQPageComponentProps extends RouteComponentProps {
-  listOfQnA: Array<QnA>;
+  pageContext: {
+    qnaArray: [any];
+  };
 }
 
 export default function FAQPageComponent(props: FAQPageComponentProps) {
@@ -56,7 +56,7 @@ export default function FAQPageComponent(props: FAQPageComponentProps) {
             <Typography className={classes.lastUpdated} align="center">
               Last updated: 7th August, 2020
             </Typography>
-            {mockQnA.map((qna) => (
+            {props.pageContext.qnaArray.map((qna) => (
               <Accordion>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
