@@ -1,6 +1,5 @@
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { Box } from "@material-ui/core";
-import { classicAndroidVsJetpackComposeMap } from "../../utils/Data";
 import { createMuiTheme, makeStyles } from "@material-ui/core/styles";
 import IfThisThenThatColumnComponentType from "../../models/IfThisThenThatColumnComponentType";
 import JetpackComposeMetadata from "../../models/JetpackComposeMetadata";
@@ -17,7 +16,6 @@ interface IfThisThenThanColumnComponentProps {
   prefix: string;
   suffix: string;
   selectedKey: string;
-  // TODO: Get rid of this hardcoded map
   map: Map<string, JetpackComposeMetadata>;
   componentType: IfThisThenThatColumnComponentType;
   handleChange: (value: string) => void;
@@ -35,7 +33,7 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
   props
 ) => {
   const classes = useStyles();
-  const classicAndroid = Array.from(classicAndroidVsJetpackComposeMap.keys());
+  const classicAndroid = Array.from(props.map.keys());
   const breakpointUpLg: boolean = useMediaQuery(theme.breakpoints.up("lg"));
 
   return (

@@ -1,4 +1,3 @@
-import { classicAndroidVsJetpackComposeMap } from "../../utils/Data";
 import Grid from "@material-ui/core/Grid";
 import { Helmet } from "react-helmet";
 import { makeStyles } from "@material-ui/core/styles";
@@ -8,12 +7,14 @@ import NavigationBar from "../core/NavigationBar";
 import JetpackComposeAppFooter from "../core/JetpackComposeAppFooter";
 import React, { useState, useEffect } from "react";
 import { RouteComponentProps } from "@reach/router";
+import JetpackComposeMetadata from "../../models/JetpackComposeMetadata";
 
 interface IfThisThenThatComponentProps extends RouteComponentProps {
-  androidParam?: string;
   pageContext?: {
     classicAndroid?: any;
+    iftttArray: [any];
   };
+  androidParam?: string;
 }
 
 export default function IfThisThenThatComponent(
@@ -25,6 +26,24 @@ export default function IfThisThenThatComponent(
     setClassicAndroidValue(newValue);
   }
 
+  let classicAndroidVsJetpackComposeMap = new Map<
+    string,
+    JetpackComposeMetadata
+  >();
+
+  if (props.pageContext && props.pageContext.iftttArray) {
+    props.pageContext.iftttArray.forEach((element) => {
+      classicAndroidVsJetpackComposeMap.set(
+        element.classicAndroid,
+        new JetpackComposeMetadata(
+          element.compose,
+          element.exampleUrl,
+          element.documentationUrl
+        )
+      );
+    });
+  }
+
   useEffect(() => {
     if (
       (selectedClassicAndroid === undefined || selectedClassicAndroid === "") &&
@@ -33,7 +52,11 @@ export default function IfThisThenThatComponent(
     ) {
       setClassicAndroidValue(props.androidParam);
     }
-  }, [selectedClassicAndroid, props.androidParam]);
+  }, [
+    selectedClassicAndroid,
+    props.androidParam,
+    classicAndroidVsJetpackComposeMap,
+  ]);
 
   return (
     <>
