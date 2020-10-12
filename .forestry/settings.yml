@@ -6,8 +6,7 @@ webhook_url:
 sections:
 - type: document
   path: "./src/data/qna.json"
-  label: FAQ's
-  match: "**/*"
+  label: FAQ
 - type: document
   path: src/data/ifttt.json
   label: IFTTT
