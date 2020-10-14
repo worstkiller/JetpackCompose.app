@@ -5,7 +5,7 @@ import IfThisThenThatColumnComponentType from "../../models/IfThisThenThatColumn
 import JetpackComposeMetadata from "../../models/JetpackComposeMetadata";
 import Link from "@material-ui/core/Link";
 import { navigate } from "gatsby";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import { Theme } from "@material-ui/core";
 import { ThemeProvider, ClassNameMap } from "@material-ui/styles";
@@ -53,22 +53,24 @@ export const IfThisThenThanColumnComponent: FunctionComponent<IfThisThenThanColu
             <ThemeProvider theme={theme}>
               <Autocomplete
                 id="combo-box-demo"
-                value={
-                  validSelectedKey(props.selectedKey, props.map)
-                    ? props.selectedKey
-                    : ""
-                }
+                value={props.selectedKey}
                 options={classicAndroid}
                 classes={{
                   option: classes.dropdownOptions,
                 }}
                 onInputChange={(event, newInputValue) => {
                   props.handleChange(newInputValue);
-                  navigate(
-                    "/What-is-the-equivalent-of-" +
-                      newInputValue +
-                      "-in-Jetpack-Compose"
-                  );
+                  if (
+                    (props.selectedKey !== newInputValue &&
+                      validSelectedKey(newInputValue, props.map)) ||
+                    newInputValue === ""
+                  ) {
+                    navigate(
+                      "/What-is-the-equivalent-of-" +
+                        newInputValue +
+                        "-in-Jetpack-Compose"
+                    );
+                  }
                 }}
                 getOptionLabel={(option) => option}
                 renderInput={(params) => (

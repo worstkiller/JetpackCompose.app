@@ -14,7 +14,6 @@ interface IfThisThenThatComponentProps extends RouteComponentProps {
     classicAndroid?: any;
     iftttArray: [any];
   };
-  androidParam?: string;
 }
 
 export default function IfThisThenThatComponent(
@@ -47,15 +46,18 @@ export default function IfThisThenThatComponent(
   useEffect(() => {
     if (
       (selectedClassicAndroid === undefined || selectedClassicAndroid === "") &&
-      props.androidParam !== undefined &&
-      classicAndroidVsJetpackComposeMap.get(props.androidParam) !== null
+      props.pageContext?.classicAndroid !== undefined &&
+      props.pageContext?.classicAndroid !== "" &&
+      classicAndroidVsJetpackComposeMap.get(
+        props.pageContext.classicAndroid
+      ) !== null
     ) {
-      setClassicAndroidValue(props.androidParam);
+      setClassicAndroidValue(props.pageContext.classicAndroid);
     }
   }, [
     selectedClassicAndroid,
-    props.androidParam,
     classicAndroidVsJetpackComposeMap,
+    props.pageContext,
   ]);
 
   return (
@@ -65,7 +67,10 @@ export default function IfThisThenThatComponent(
         <Helmet>
           <title>
             What's the equivalent of{" "}
-            {props.androidParam ? props.androidParam : ""} in Jetpack Compose?
+            {props.pageContext?.classicAndroid
+              ? props.pageContext.classicAndroid
+              : ""}{" "}
+            in Jetpack Compose?
           </title>
           <meta
             name="description"
@@ -92,9 +97,7 @@ export default function IfThisThenThatComponent(
               <IfThisThenThanColumnComponent
                 prefix="If you used..."
                 suffix="In Classic Android 🤖💚"
-                selectedKey={
-                  props.pageContext ? props.pageContext.classicAndroid : ""
-                }
+                selectedKey={selectedClassicAndroid}
                 map={classicAndroidVsJetpackComposeMap}
                 handleChange={handleChange}
                 componentType={IfThisThenThatColumnComponentType.KEY}
@@ -110,9 +113,7 @@ export default function IfThisThenThatComponent(
               <IfThisThenThanColumnComponent
                 prefix="Then, you could use..."
                 suffix="In Jetpack Compose 🚀"
-                selectedKey={
-                  props.pageContext ? props.pageContext.classicAndroid : ""
-                }
+                selectedKey={selectedClassicAndroid}
                 map={classicAndroidVsJetpackComposeMap}
                 handleChange={handleChange}
                 componentType={IfThisThenThatColumnComponentType.VALUE}
