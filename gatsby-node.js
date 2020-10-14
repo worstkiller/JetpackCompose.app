@@ -1,4 +1,5 @@
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
+  
   const iftttResult = await graphql(`
     {
       allIftttJson {
