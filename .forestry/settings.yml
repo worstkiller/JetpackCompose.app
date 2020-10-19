@@ -7,7 +7,6 @@ sections:
 - type: document
   path: src/data/components.json
   label: Components
-  match: "**/*"
 - type: document
   path: src/data/qna.json
   label: FAQ's
