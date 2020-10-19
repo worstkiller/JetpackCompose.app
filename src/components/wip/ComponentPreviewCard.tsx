@@ -4,7 +4,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Chip from "@material-ui/core/Chip";
 import Grid from "@material-ui/core/Grid";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import StarBorderRounded from "@material-ui/icons/StarBorderRounded";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { FunctionComponent } from "react";
 import Typography from "@material-ui/core/Typography";
@@ -16,6 +16,7 @@ export interface ComponentPreviewCardProps {
   resourceLink: string;
   description: string;
   categories: string[];
+  githubStars: number;
 }
 
 export const ComponentPreviewCard: FunctionComponent<ComponentPreviewCardProps> = (
@@ -40,10 +41,17 @@ export const ComponentPreviewCard: FunctionComponent<ComponentPreviewCardProps> 
           >
             <Grid item className={classes.cardTitleGrid}>
               <Grid container className={classes.cardContentGrid} wrap="nowrap">
-                <Grid item xs={11}>
+                <Grid item xs={10}>
                   <Typography className={classes.cardTitle}>
                     {props.title}
                   </Typography>
+                </Grid>
+                <Grid item xs={2} className={classes.starGridRow}>
+                  <StarBorderRounded
+                    className={classes.starIcon}
+                    fontSize="small"
+                  />
+                  <span className={classes.starText}>{props.githubStars}</span>
                 </Grid>
               </Grid>
             </Grid>
@@ -67,7 +75,7 @@ export const ComponentPreviewCard: FunctionComponent<ComponentPreviewCardProps> 
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
-    width: 264,
+    // width: 264,
     "&:hover": {
       cursor: "pointer",
     },
@@ -80,24 +88,32 @@ const useStyles = makeStyles({
   cardContentGrid: {
     width: "100%",
   },
-  cardTitleGrid: {},
+  cardTitleGrid: {
+    display: "inline-flex",
+    verticalAlign: "middle",
+  },
   cardChipGrid: {
     marginTop: "2%",
     display: "block!important" as "block",
   },
   cardTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: "Playfair Display",
-  },
-  cardSubtitle: {
     overflow: "hidden",
     textOverflow: "ellipsis",
     display: "-webkit-box",
     WebkitLineClamp: 2,
     WebkitBoxOrient: "vertical",
+  },
+  cardSubtitle: {
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    display: "-webkit-box",
+    WebkitLineClamp: 4,
+    WebkitBoxOrient: "vertical",
     fontSize: 14,
     fontFamily: "Roboto",
-    color: "#808080",
+    color: "#586069",
   },
   chip: {
     color: "#FFFFFF",
@@ -112,5 +128,19 @@ const useStyles = makeStyles({
     "&:not(:first-child)": {
       marginLeft: "4px",
     },
+  },
+  starGridRow: {
+    display: "inline-flex",
+    verticalAlign: "middle",
+  },
+  starIcon: {
+    color: "#586069",
+  },
+  starText: {
+    fontSize: 14,
+    fontFamily: "Roboto",
+    color: "#586069",
+    display: "flex",
+    verticalAlign: "middle",
   },
 });
