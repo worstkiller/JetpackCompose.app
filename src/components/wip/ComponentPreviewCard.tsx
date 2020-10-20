@@ -1,8 +1,7 @@
-import Avatar from "@material-ui/core/Avatar";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Chip from "@material-ui/core/Chip";
+import clsx from "clsx";
 import Grid from "@material-ui/core/Grid";
 import StarBorderRounded from "@material-ui/icons/StarBorderRounded";
 import { makeStyles } from "@material-ui/core/styles";
@@ -31,7 +30,10 @@ export const ComponentPreviewCard: FunctionComponent<ComponentPreviewCardProps> 
           window.open(props.resourceLink, "_blank");
         }}
       >
-        <CardMedia image={props.imageUrl} className={classes.media} />
+        <CardMedia
+          className={clsx(classes.media)}
+          image={props.imageUrl}
+        />
         <CardContent className={classes.cardContent}>
           <Grid
             container
