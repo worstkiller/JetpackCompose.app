@@ -26,12 +26,25 @@
     ]
   },
   {
-    "id": "https://github.com/adibfara/ComposeClock",
-    "title": "Compose Clock",
-    "description": "Particle clock created with Jetpack Compose framework",
-    "contributorName": "Adib Faramarzi ",
-    "url": "https://github.com/adibfara/ComposeClock",
-    "imageUrl": "https://raw.githubusercontent.com/adibfara/ComposeClock/master/demo.gif",
+    "id": "https://github.com/alexjlockwood/bees-and-bombs-compose",
+    "title": "Bees And Bombs Compose",
+    "description": "Implementing some cool animations using Jetpack Compose",
+    "contributorName": "Alex Lockwood",
+    "url": "https://github.com/alexjlockwood/bees-and-bombs-compose",
+    "imageUrl": "https://github.com/alexjlockwood/bees-and-bombs-compose/raw/master/art/ring-of-circles-compose.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Animation",
+      "Examples"
+    ]
+  },
+  {
+    "id": "https://github.com/ditn/Doom-Compose",
+    "title": "Doom Compose",
+    "description": "An implementation of the DOOM fire effect using Jetpack Compose",
+    "contributorName": " Adam Bennett",
+    "url": "https://github.com/ditn/Doom-Compose",
+    "imageUrl": "https://camo.githubusercontent.com/669fe429582c4bb6f07dfc31be08db973498a149/68747470733a2f2f6164616d62656e6e6574742e6465762f696d672f646f6f6d2d636f6d706f73652d66696e616c2e676966",
     "addedDate": "10-19-2020",
     "categories": [
       "Animation"
@@ -91,6 +104,18 @@
     ]
   },
   {
+    "id": "https://github.com/adibfara/ComposeClock",
+    "title": "Compose Clock",
+    "description": "Particle clock created with Jetpack Compose framework",
+    "contributorName": "Adib Faramarzi ",
+    "url": "https://github.com/adibfara/ComposeClock",
+    "imageUrl": "https://raw.githubusercontent.com/adibfara/ComposeClock/master/demo.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Animation"
+    ]
+  },
+  {
     "id": "https://github.com/vipulasri/JetInstagram",
     "title": "Jet Instagram",
     "description": "JetInstagram is an Instagram UI clone app built with Jetpack Compose.",
@@ -100,18 +125,6 @@
     "addedDate": "10-19-2020",
     "categories": [
       "Examples"
-    ]
-  },
-  {
-    "id": "https://github.com/ditn/Doom-Compose",
-    "title": "Doom Compose",
-    "description": "An implementation of the DOOM fire effect using Jetpack Compose",
-    "contributorName": " Adam Bennett",
-    "url": "https://github.com/ditn/Doom-Compose",
-    "imageUrl": "https://camo.githubusercontent.com/669fe429582c4bb6f07dfc31be08db973498a149/68747470733a2f2f6164616d62656e6e6574742e6465762f696d672f646f6f6d2d636f6d706f73652d66696e616c2e676966",
-    "addedDate": "10-19-2020",
-    "categories": [
-      "Animation"
     ]
   },
   {
