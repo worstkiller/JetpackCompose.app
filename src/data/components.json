@@ -31,11 +31,23 @@
     "description": "A collection of extension libraries for Jetpack Compose",
     "contributorName": "Chris Banes",
     "url": "https://github.com/chrisbanes/accompanist",
-    "imageUrl": "https://github.com/chrisbanes/accompanist/blob/main/images/social.png",
+    "imageUrl": "https://github.com/chrisbanes/accompanist/blob/main/picasso/images/crossfade.gif",
     "addedDate": "10-19-2020",
     "categories": [
       "Library",
       "Image Loading"
+    ]
+  },
+  {
+    "id": "https://github.com/adibfara/composeclock",
+    "title": "Compose Clock",
+    "description": "Particle clock created with Jetpack Compose framework",
+    "contributorName": "Adib Faramarzi ",
+    "url": "https://github.com/adibfara/composeclock",
+    "imageUrl": "https://raw.githubusercontent.com/adibfara/ComposeClock/master/demo.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Animation"
     ]
   },
   {
@@ -49,6 +61,44 @@
     "categories": [
       "Text",
       "Markdown",
+      "Examples"
+    ]
+  },
+  {
+    "id": "https://github.com/zach-klippenstein/compose-backstack",
+    "title": "Compose Backstack",
+    "description": "Simple composable for rendering transitions between back stacks.",
+    "contributorName": "Zach Klippenstein",
+    "url": "https://github.com/zach-klippenstein/compose-backstack",
+    "imageUrl": "https://github.com/zach-klippenstein/compose-backstack/raw/main/.images/inspector.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Library",
+      "Navigation"
+    ]
+  },
+  {
+    "id": "https://github.com/zsoltk/compose-router",
+    "title": "Compose Router",
+    "description": "Routing functionality for Jetpack Compose with back stack",
+    "contributorName": "Zsolt Kocsi",
+    "url": "https://github.com/zsoltk/compose-router",
+    "imageUrl": "https://camo.githubusercontent.com/28be1ae2d7e263c64e28a27df28d2434f50dc104/68747470733a2f2f692e696d6775722e636f6d2f6b4b63414861332e706e67",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Library",
+      "Navigation"
+    ]
+  },
+  {
+    "id": "https://github.com/vipulasri/JetInstagram",
+    "title": "Jet Instagram",
+    "description": "JetInstagram is an Instagram UI clone app built with Jetpack Compose.",
+    "contributorName": "Vipul Asri",
+    "url": "https://github.com/vipulasri/JetInstagram",
+    "imageUrl": "https://github.com/vipulasri/JetInstagram/raw/master/art/jetinstagram.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
       "Examples"
     ]
   },
@@ -75,6 +125,67 @@
     "categories": [
       "Examples",
       "Tutorial"
+    ]
+  },
+  {
+    "id": "https://github.com/CaelumF/FigmaToCompose",
+    "title": "Figma To Compose",
+    "description": "Plugin and backend to convert Figma designs to Jetpack Compose code",
+    "contributorName": "Caelum Forder",
+    "url": "https://github.com/CaelumF/FigmaToCompose",
+    "imageUrl": "https://i.imgur.com/esrcpzS.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Figma Plugin"
+    ]
+  },
+  {
+    "id": "https://github.com/Gurupreet/ComposeCookBook",
+    "title": "Compose Cook Book",
+    "description": "A Collection on all Jetpack compose UI elements, Layouts, Widgets and Demo screens to see it's potential",
+    "contributorName": "Gurupreet Singh",
+    "url": "https://github.com/Gurupreet/ComposeCookBook",
+    "imageUrl": "https://camo.githubusercontent.com/f8e511c80001e2d4014cc0ed09d6520f9606dad9/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f705a667777774f6c4b517469794a465072322f67697068792e676966",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Examples"
+    ]
+  },
+  {
+    "id": "https://github.com/zach-klippenstein/compose-richtext",
+    "title": "Compose Richtext",
+    "contributorName": "Zach Klippenstein",
+    "url": "https://github.com/zach-klippenstein/compose-richtext",
+    "imageUrl": "https://github.com/zach-klippenstein/compose-richtext/raw/main/.images/slideshow-demo.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Text",
+      "Markdown"
+    ],
+    "description": "A collection of Compose libraries for working with rich text formatting and documents"
+  },
+  {
+    "id": "https://github.com/vipulasri/JetDelivery",
+    "title": "Jet Delivery",
+    "description": "JetDelivery is a sample food delivery app, built with Jetpack Compose",
+    "contributorName": "Vipul Asri",
+    "url": "https://github.com/vipulasri/JetDelivery",
+    "imageUrl": "https://github.com/vipulasri/JetDelivery/blob/master/art/screenshot-framed-1.png",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Examples"
+    ]
+  },
+  {
+    "id": "https://github.com/zsoltk/compose-pokedex",
+    "title": "Compose Pokedex",
+    "description": "Pokedex on Jetpack Compose",
+    "contributorName": "Zsolt Kocsi",
+    "url": "https://github.com/zsoltk/compose-pokedex",
+    "imageUrl": "https://camo.githubusercontent.com/a2d81c31dbdfb1f81b981eee543e14c1d55a1ef9/68747470733a2f2f696d6775722e636f6d2f497470757152682e706e67",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Examples"
     ]
   }
 ]
