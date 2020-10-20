@@ -1,8 +1,8 @@
 import { ComponentPreviewCard } from "./ComponentPreviewCard";
 import ComponentsSearchBar from "./ComponentsSearchBar";
-// import ComponentPreviewCardMetadata from "../../models/ComponentPreviewCardMetadata";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import { Helmet } from "react-helmet";
 import { makeStyles } from "@material-ui/core/styles";
 import NavigationBar from "../core/NavigationBar";
 import { RouteComponentProps } from "@reach/router";
@@ -54,52 +54,79 @@ export default function ComponentPreviewCardsSection(
 
   return (
     <>
-      <NavigationBar />
-      <div className={classes.root}>
-        <Container maxWidth="lg">
-          <Grid container className={classes.grid} spacing={2}>
-            <Grid item xs={12} lg={12} className={classes.searchBar}>
-              <ComponentsSearchBar
-                onChangeHandler={setSearchQuery}
-                componentCategories={uniqueComponentCategories.sort()}
-              />
-            </Grid>
-            <Grid item xs={12} lg={12}>
-              <Grid container spacing={4}>
-                {sortedComponentsArray
-                  .filter((element, index, array) =>
-                    meetsSearchCriteria(element, index, array, searchQuery)
-                  )
-                  .map((metadata) => (
-                    <Grid
-                      key={metadata.id}
-                      item
-                      xs={12}
-                      sm={6}
-                      md={4}
-                      lg={3}
-                      alignContent="center"
-                    >
-                      <ComponentPreviewCard
-                        title={metadata.title}
-                        contributor={metadata.contributorName}
-                        imageUrl={metadata.imageUrl}
-                        resourceLink={metadata.url}
-                        description={metadata.description}
-                        categories={metadata.categories}
-                        githubStars={
-                          githubMap.get(metadata.url)
-                            ? githubMap.get(metadata.url).stargazers.totalCount
-                            : null
-                        }
-                      />
-                    </Grid>
-                  ))}
+      <Helmet>
+        <title>
+          Compose Marketplace: Find the most popular Jetpack Compose libraries,
+          examples and tools
+        </title>
+        <meta
+          name="description"
+          content="Compose Marketplace: Find the most popular Jetpack Compose libraries, examples and tools"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://jetpackcompose.app/faq" />
+        <meta
+          property="twitter:title"
+          content="Compose Marketplace: Find the most popular Jetpack Compose libraries, examples and tools"
+        />
+        <meta
+          property="twitter:description"
+          content="Compose Marketplace: Find the most popular Jetpack Compose libraries, examples and tools"
+        />
+        <meta
+          property="twitter:image"
+          content="https://jetpackcompose.app/faq_poster.png"
+        />
+      </Helmet>
+      <main>
+        <NavigationBar />
+        <div className={classes.root}>
+          <Container maxWidth="lg">
+            <Grid container className={classes.grid} spacing={2}>
+              <Grid item xs={12} lg={12} className={classes.searchBar}>
+                <ComponentsSearchBar
+                  onChangeHandler={setSearchQuery}
+                  componentCategories={uniqueComponentCategories.sort()}
+                />
+              </Grid>
+              <Grid item xs={12} lg={12}>
+                <Grid container spacing={4}>
+                  {sortedComponentsArray
+                    .filter((element, index, array) =>
+                      meetsSearchCriteria(element, index, array, searchQuery)
+                    )
+                    .map((metadata) => (
+                      <Grid
+                        key={metadata.id}
+                        item
+                        xs={12}
+                        sm={6}
+                        md={4}
+                        lg={3}
+                        alignContent="center"
+                      >
+                        <ComponentPreviewCard
+                          title={metadata.title}
+                          contributor={metadata.contributorName}
+                          imageUrl={metadata.imageUrl}
+                          resourceLink={metadata.url}
+                          description={metadata.description}
+                          categories={metadata.categories}
+                          githubStars={
+                            githubMap.get(metadata.url)
+                              ? githubMap.get(metadata.url).stargazers
+                                  .totalCount
+                              : null
+                          }
+                        />
+                      </Grid>
+                    ))}
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
-        </Container>
-      </div>
+          </Container>
+        </div>
+      </main>
     </>
   );
 }

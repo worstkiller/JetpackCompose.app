@@ -177,7 +177,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   );
 
   createPage({
-    path: `wip`,
+    path: `compose-marketplace`,
     component: require.resolve(
       "./src/components/wip/ComponentPreviewCardsSection.tsx"
     ),
