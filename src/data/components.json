@@ -212,5 +212,18 @@
     "categories": [
       "Examples"
     ]
+  },
+  {
+    "id": "https://github.com/mobnetic/compose-shared-element",
+    "title": "Compose Shared Element",
+    "description": "Experiment with SharedElement transition in Jetpack Compose, inspired by Flutter Hero widget.",
+    "contributorName": "Maciej Ciemiega",
+    "url": "https://github.com/mobnetic/compose-shared-element",
+    "imageUrl": "https://github.com/mobnetic/compose-shared-element/raw/master/screenshots/TransitionAnimation.gif",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Navigation",
+      "Animation"
+    ]
   }
 ]
