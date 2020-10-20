@@ -5,7 +5,7 @@
     "description": "Showkase is an annotation-processor based Android library that helps you organize, discover, search and visualize Jetpack Compose UI elements",
     "contributorName": "Vinay Gaba",
     "url": "https://github.com/airbnb/Showkase",
-    "imageUrl": "https://github.com/airbnb/Showkase/blob/master/assets/showkase_demo.gif",
+    "imageUrl": "https://github.com/airbnb/Showkase/raw/master/assets/showkase_demo.gif",
     "addedDate": "10-19-2020",
     "categories": [
       "Library",
@@ -47,9 +47,9 @@
     "imageUrl": "https://www.hellsoft.se/content/images/2020/09/Screenshot_1599569930-1.png",
     "addedDate": "10-19-2020",
     "categories": [
-      "Sample",
       "Text",
-      "Markdown"
+      "Markdown",
+      "Examples"
     ]
   },
   {
@@ -62,6 +62,19 @@
     "addedDate": "10-19-2020",
     "categories": [
       "Animation"
+    ]
+  },
+  {
+    "id": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example",
+    "title": "Learn Compose By Example",
+    "description": "🚀 This project contains various examples that show you the \"Jetpack Compose\" way",
+    "contributorName": "Vinay Gaba",
+    "url": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example",
+    "imageUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/raw/master/screenshots/jetpack_compose_poster.png",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Examples",
+      "Tutorial"
     ]
   }
 ]
