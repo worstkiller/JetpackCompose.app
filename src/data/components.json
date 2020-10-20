@@ -1,65 +1,67 @@
 [
-    {
-        "id": 1,
-        "title": "Rich Text Component",
-        "description": "This component allows you to create rich markdown text.",
-        "contributorName": "Vinay Gaba",
-        "url": "https://github.com/airbnb/Showkase",
-        "imageUrl": "https://www.verdict.co.uk/wp-content/uploads/2017/09/giphy-downsized-large.gif",
-        "addedDate": "",
-        "categories": [
-            "Input",
-            "Animation",
-            "Input",
-            "Animation",
-            "Input",
-            "Animation"
-        ]
-    },
-    {
-        "id": 2,
-        "title": "Rich Text Component",
-        "description": "This component allows you to create rich markdown text.",
-        "contributorName": "Vinay Gaba",
-        "url": "https://github.com/airbnb/Showkase",
-        "imageUrl": "https://www.verdict.co.uk/wp-content/uploads/2017/09/giphy-downsized-large.gif",
-        "addedDate": "",
-        "categories": ["Floating Action Button"]
-    },
-    {
-        "id": 3,
-        "title": "Rich Text Component",
-        "description": "This component allows you to create rich markdown text.",
-        "contributorName": "Vinay Gaba",
-        "url": "https://github.com/airbnb/Showkase",
-        "imageUrl": "https://www.verdict.co.uk/wp-content/uploads/2017/09/giphy-downsized-large.gif",
-        "addedDate": "",
-        "categories": [
-            "Animation"
-        ]
-    },
-    {
-        "id": 4,
-        "title": "Rich Text Component",
-        "description": "This component allows you to create rich markdown text.",
-        "contributorName": "Vinay Gaba",
-        "url": "https://github.com/vinaygaba/RubberStamp",
-        "imageUrl": "https://www.verdict.co.uk/wp-content/uploads/2017/09/giphy-downsized-large.gif",
-        "addedDate": "",
-        "categories": [
-            "Loading"
-        ]
-    },
-    {
-        "id": 5,
-        "title": "Rich Text Component",
-        "description": "This component allows you to create rich markdown text.",
-        "contributorName": "Vinay Gaba",
-        "url": "https://github.com/vinaygaba/CreditCardView",
-        "imageUrl": "https://www.verdict.co.uk/wp-content/uploads/2017/09/giphy-downsized-large.gif",
-        "addedDate": "",
-        "categories": [
-            "Text"
-        ]
-    }
+  {
+    "id": "https://github.com/airbnb/Showkase",
+    "title": "Showkase",
+    "description": "Showkase is an annotation-processor based Android library that helps you organize, discover, search and visualize Jetpack Compose UI elements",
+    "contributorName": "Vinay Gaba",
+    "url": "https://github.com/airbnb/Showkase",
+    "imageUrl": "https://github.com/airbnb/Showkase/blob/master/assets/showkase_demo.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Library",
+      "Design System"
+    ]
+  },
+  {
+    "id": "https://github.com/skydoves/Orchestra",
+    "title": "Orchestra",
+    "description": "🎺 Jetpack Compose compatible libraries using Balloon, ColorPickerView, PowerSpinner",
+    "contributorName": "Jaewoong Eum",
+    "url": "https://github.com/skydoves/Orchestra",
+    "imageUrl": "https://user-images.githubusercontent.com/24237865/61194943-f9d70380-a6ff-11e9-807f-ba1ca8126f8a.gif",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Color Picker",
+      "Spinner"
+    ]
+  },
+  {
+    "id": "https://github.com/chrisbanes/accompanist",
+    "title": "Accompanist",
+    "description": "A collection of extension libraries for Jetpack Compose",
+    "contributorName": "Chris Banes",
+    "url": "https://github.com/chrisbanes/accompanist",
+    "imageUrl": "https://github.com/chrisbanes/accompanist/blob/main/images/social.png",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Library",
+      "Image Loading"
+    ]
+  },
+  {
+    "id": "https://github.com/ErikHellman/MarkdownComposer",
+    "title": "Markdown Composer",
+    "description": "Markdown rendering in Compose",
+    "contributorName": "Erik Hellman",
+    "url": "https://github.com/ErikHellman/MarkdownComposer",
+    "imageUrl": "https://www.hellsoft.se/content/images/2020/09/Screenshot_1599569930-1.png",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Sample",
+      "Text",
+      "Markdown"
+    ]
+  },
+  {
+    "id": "https://github.com/ditn/Doom-Compose",
+    "title": "Doom Compose",
+    "description": "An implementation of the DOOM fire effect using Jetpack Compose",
+    "contributorName": " Adam Bennett",
+    "url": "https://github.com/ditn/Doom-Compose",
+    "imageUrl": "https://camo.githubusercontent.com/669fe429582c4bb6f07dfc31be08db973498a149/68747470733a2f2f6164616d62656e6e6574742e6465762f696d672f646f6f6d2d636f6d706f73652d66696e616c2e676966",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Animation"
+    ]
+  }
 ]
