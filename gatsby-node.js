@@ -65,7 +65,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
             remaining
             resetAt
           }
-          search(query: $queryString, type: REPOSITORY, first: 7) {
+          search(query: $queryString, type: REPOSITORY, first: 100) {
             edges {
               node {
                 ... on GitHub_Repository {
