@@ -165,6 +165,18 @@
     "description": "A collection of Compose libraries for working with rich text formatting and documents"
   },
   {
+    "id": "https://github.com/hitherejoe/ComposeAcademy",
+    "title": "Compose Academy",
+    "description": "Website providing snippets and examples for Jetpack Compose on the Android platform",
+    "contributorName": "Joe Birch",
+    "url": "https://github.com/hitherejoe/ComposeAcademy",
+    "imageUrl": "https://github.com/hitherejoe/ComposeAcademy/raw/master/compose_academy.png",
+    "addedDate": "10-19-2020",
+    "categories": [
+      "Examples"
+    ]
+  },
+  {
     "id": "https://github.com/vipulasri/JetDelivery",
     "title": "Jet Delivery",
     "description": "JetDelivery is a sample food delivery app, built with Jetpack Compose",
