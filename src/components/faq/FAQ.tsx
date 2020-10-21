@@ -15,6 +15,7 @@ import { RouteComponentProps } from "@reach/router";
 interface FAQPageComponentProps extends RouteComponentProps {
   pageContext: {
     qnaArray: [any];
+    lastUpdateDate: string;
   };
 }
 
@@ -54,7 +55,7 @@ export default function FAQPageComponent(props: FAQPageComponentProps) {
               Find answers to frequently asked questions about Jetpack Compose!
             </Typography>
             <Typography className={classes.lastUpdated} align="center">
-              Last updated: 7th August, 2020
+              Last updated: {props.pageContext.lastUpdateDate}
             </Typography>
             {props.pageContext.qnaArray.map((qna) => (
               <Accordion>

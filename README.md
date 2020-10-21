@@ -7,26 +7,72 @@ your Jetpack Compose knowledge.
 
 There are 4 main sections in the website:
 
+<table align="center" style="width:100%">
+    <tr>
+        <td><img src="screenshots/catalog_poster.png"></td>
+        <td>Compose Catalog - The most reliable source for finding the latest libraries, tools and & examples about Jetpack Compose.</td>
+    </tr>
+    <tr>
+        <td>Which Compose API to use? - An IFTTT'esque tool that lets you enter an API/Widget from classic Android and makes a recommendation for the corresponding API to use in Jetpack Compose.</td>
+        <td><img src="screenshots/ifttt_poster.png"></td>
+    </tr>
+    <tr>
+        <td><img src="screenshots/quick_bites_poster.png"></td>
+        <td>Compose Quick Bites - Easy-to-consume bite sized content about the core concepts of Jetpack Compose.</td>
+    </tr>
+    <tr>
+        <td>FAQ's - The most common questions about Compose answered with links to relevant sources.</td>
+        <td><img src="screenshots/faq_poster.png"></td>
+    </tr>
+</table>
 
-<p align="center">
-    <img src="screenshots/catalog_poster.png">
-</p>
+## Tech Stack
 
-<p align="center">
-    <img src="screenshots/ifttt_poster.png">
-</p>
+The website uses the following frameworks & tools:
 
-<p align="center">
-    <img src="screenshots/quick_bites_poster.png">
-</p>
+* [Gatsby](https://www.gatsbyjs.com/)
+* [Vercel](https://vercel.com/) for hosting the site and continous deployments
+* [React](https://reactjs.org/)
+* [Forestry](https://forestry.io/) - CMS layer so that I can organize the
+  content of the site. All the content is stored within this repo itself in json files. You can find them [here](src/data)
 
-<p align="center">
-    <img src="screenshots/faq_poster.png">
-</p>
+<br/>
 
+The table below illustrates links you to the relevant folders for each part of the website. If you want to update any of the content on the site, you can simply do so by updating corresponding json files. It's intentionally lightweight so that anyone can contribute. 
+
+<table align="center" style="width:100%">
+    <tr>
+        <td>Compose Catalog</td>
+        <td>
+            <a href="src/components/catalog">UI Code</a> <br/>
+            <a href="src/data/catalog.json">Content/Data</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Which Compose API to use?</td>
+        <td>
+            <a href="src/components/ifttt">UI Code</a> <br/>
+            <a href="src/data/ifttt.json">Content/Data</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Compose Quick Bites</td>
+        <td>
+            <a href="src/components/quickbites">UI Code</a> <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>FAQ's</td>
+        <td>
+            <a href="src/components/faq">UI Code</a> <br/>
+            <a href="src/data/faq.json">Content/Data</a>
+        </td>
+    </tr>
+</table>
 
 
 ## Contributing
+
 Pull requests are welcome! I'd love your help in improving the website. Feel
 free to browse through open issues to look for things that need work. If you
 have a new idea or want to suggest improvements, just oepn a new issue and we

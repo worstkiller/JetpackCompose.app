@@ -69,7 +69,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   /* FAQ Page Generation */
   const qnaResult = await graphql(`
     {
-      allQnaJson {
+      allFaqJson {
         edges {
           node {
             question
@@ -80,7 +80,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   `);
 
-  let qnaArray = qnaResult.data.allQnaJson.edges.map((edges) => {
+  let qnaArray = qnaResult.data.allFaqJson.edges.map((edges) => {
     return edges.node;
   });
 
@@ -89,6 +89,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     component: require.resolve("./src/components/faq/FAQ.tsx"),
     context: {
       qnaArray: qnaArray,
+      lastUpdateDate: new Date().toISOString().slice(0, 10),
     },
   });
 
@@ -101,7 +102,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   /* Compose Marketplace */
   const componentsResult = await graphql(`
     {
-      allComponentsJson {
+      allCatalogJson {
         edges {
           node {
             id
@@ -118,7 +119,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   `);
 
   let queryString = "";
-  componentsResult.data.allComponentsJson.edges.forEach((edge) => {
+  componentsResult.data.allCatalogJson.edges.forEach((edge) => {
     const element = edge.node;
 
     const url = element.url;
@@ -170,7 +171,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     githubResultMap[element.url] = element;
   });
 
-  let componentsArray = componentsResult.data.allComponentsJson.edges.map(
+  let componentsArray = componentsResult.data.allCatalogJson.edges.map(
     (edges) => {
       return edges.node;
     }
@@ -179,7 +180,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   createPage({
     path: `compose-catalog`,
     component: require.resolve(
-      "./src/components/wip/ComponentPreviewCardsSection.tsx"
+      "./src/components/catalog/ComponentPreviewCardsSection.tsx"
     ),
     context: {
       componentsArray: componentsArray,
