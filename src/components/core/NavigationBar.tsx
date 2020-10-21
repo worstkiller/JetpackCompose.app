@@ -57,10 +57,10 @@ function NavigationBar(props: IProps) {
             value="/"
           />
           <Tab
-            label="Compose Marketplace"
+            label="Compose Catalog"
             {...a11yProps(0)}
             className={classes.tab}
-            value="/compose-marketplace"
+            value="/compose-catalog"
           />
           <Tab
             label="FAQ's"

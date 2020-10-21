@@ -56,22 +56,22 @@ export default function ComponentPreviewCardsSection(
     <>
       <Helmet>
         <title>
-          Compose Marketplace: Find the most popular Jetpack Compose libraries,
+          Compose Catalog: Find the most popular Jetpack Compose libraries,
           examples and tools
         </title>
         <meta
           name="description"
-          content="Compose Marketplace: Find the most popular Jetpack Compose libraries, examples and tools"
+          content="Compose Catalog: Find the most popular Jetpack Compose libraries, examples and tools"
         />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://jetpackcompose.app/faq" />
+        <meta property="twitter:url" content="https://jetpackcompose.app/compose-catalog" />
         <meta
           property="twitter:title"
-          content="Compose Marketplace: Find the most popular Jetpack Compose libraries, examples and tools"
+          content="Compose Catalog: Find the most popular Jetpack Compose libraries, examples and tools"
         />
         <meta
           property="twitter:description"
-          content="Compose Marketplace: Find the most popular Jetpack Compose libraries, examples and tools"
+          content="Compose Catalog: Find the most popular Jetpack Compose libraries, examples and tools"
         />
         <meta
           property="twitter:image"
