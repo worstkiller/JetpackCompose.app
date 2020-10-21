@@ -225,5 +225,17 @@
       "Navigation",
       "Animation"
     ]
+  },
+  {
+    "id": "https://github.com/Foso/Jetpack-Compose-Playground/",
+    "title": "Jetpack Compose Playground",
+    "description": "Community-driven collection of Jetpack Compose example code and tutorials 🚀",
+    "contributorName": "Jens Klingenberg",
+    "url": "https://github.com/Foso/Jetpack-Compose-Playground/",
+    "imageUrl": "https://github.com/Foso/Jetpack-Compose-Playground/raw/master/docs/images/readme/ControlledScrollDemo.png",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Examples"
+    ]
   }
 ]
