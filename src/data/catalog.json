@@ -80,7 +80,7 @@
   {
     "id": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example",
     "title": "Learn Compose By Example",
-    "description": "🚀 This project contains various examples that show how you would do things the \"Jetpack Compose\" way",
+    "description": "🚀 This project contains various examples with comments that show how you would do things the \"Jetpack Compose\" way",
     "contributorName": "Vinay Gaba",
     "url": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example",
     "imageUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/raw/master/screenshots/jetpack_compose_poster.png",
@@ -211,6 +211,82 @@
     "addedDate": "10-19-2020",
     "categories": [
       "Examples"
+    ]
+  },
+  {
+    "id": "https://github.com/mobnetic/compose-shared-element",
+    "title": "Compose Shared Element",
+    "description": "Experiment with SharedElement transition in Jetpack Compose, inspired by Flutter Hero widget.",
+    "contributorName": "Maciej Ciemiega",
+    "url": "https://github.com/mobnetic/compose-shared-element",
+    "imageUrl": "https://github.com/mobnetic/compose-shared-element/raw/master/screenshots/TransitionAnimation.gif",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Navigation",
+      "Animation"
+    ]
+  },
+  {
+    "id": "https://github.com/Foso/Jetpack-Compose-Playground",
+    "title": "Jetpack Compose Playground",
+    "description": "Community-driven collection of Jetpack Compose example code and tutorials 🚀",
+    "contributorName": "Jens Klingenberg",
+    "url": "https://github.com/Foso/Jetpack-Compose-Playground",
+    "imageUrl": "https://github.com/Foso/Jetpack-Compose-Playground/raw/master/docs/images/readme/ControlledScrollDemo.png",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Examples"
+    ]
+  },
+  {
+    "id": "https://github.com/wajahatkarim3/DinoCompose",
+    "title": "Dino Compose",
+    "description": "Chrome's Dino T-Rex game developed in Jetpack Compose",
+    "contributorName": "Wajahat Karim",
+    "url": "https://github.com/wajahatkarim3/DinoCompose",
+    "imageUrl": "https://github.com/wajahatkarim3/DinoCompose/raw/master/DinoDemo.gif",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Examples",
+      "Game"
+    ]
+  },
+  {
+    "id": "https://github.com/alexjlockwood/android-2048-compose",
+    "title": "Android 2048 Compose",
+    "description": "2048 implemented using Jetpack Compose",
+    "contributorName": "Alex Lockwood",
+    "url": "https://github.com/alexjlockwood/android-2048-compose",
+    "imageUrl": "https://github.com/alexjlockwood/android-2048-compose/raw/master/art/twenty-forty-eight.gif",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Examples",
+      "Game"
+    ]
+  },
+  {
+    "id": "https://github.com/Popalay/Tetris-Compose",
+    "title": "Tetris Compose",
+    "description": "Tetris implemented using Jetpack Compose",
+    "url": "https://github.com/Popalay/Tetris-Compose",
+    "imageUrl": "https://github.com/Popalay/Tetris-Compose/raw/master/art/sample.gif",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Examples",
+      "Game"
+    ],
+    "contributorName": "Denys Nykyforov"
+  },
+  {
+    "id": "https://github.com/pocmo/recompose",
+    "title": "Recompose",
+    "description": "recompose is a tool for converting Android layouts in XML to Kotlin code using Jetpack Compose.",
+    "contributorName": "Sebastian Kaspari",
+    "url": "https://github.com/pocmo/recompose",
+    "imageUrl": "https://github.com/pocmo/recompose/raw/main/demo.gif",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Tool"
     ]
   },
   {
