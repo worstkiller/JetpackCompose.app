@@ -237,5 +237,18 @@
     "categories": [
       "Examples"
     ]
+  },
+  {
+    "id": "https://github.com/wajahatkarim3/DinoCompose",
+    "title": "Dino Compose",
+    "description": "Chrome's Dino T-Rex game developed in Jetpack Compose",
+    "contributorName": "Wajahat Karim",
+    "url": "https://github.com/wajahatkarim3/DinoCompose",
+    "imageUrl": "https://github.com/wajahatkarim3/DinoCompose/raw/master/DinoDemo.gif",
+    "addedDate": "10-20-2020",
+    "categories": [
+      "Examples",
+      "Game"
+    ]
   }
 ]
