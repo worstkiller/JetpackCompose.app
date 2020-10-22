@@ -5,10 +5,10 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
-  path: src/data/components.json
+  path: src/data/catalog.json
   label: Components
 - type: document
-  path: src/data/qna.json
+  path: src/data/faq.json
   label: FAQ's
 - type: document
   path: src/data/ifttt.json
