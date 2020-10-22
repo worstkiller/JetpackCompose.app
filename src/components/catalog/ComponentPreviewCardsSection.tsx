@@ -3,6 +3,7 @@ import ComponentsSearchBar from "./ComponentsSearchBar";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { Helmet } from "react-helmet";
+import JetpackComposeAppFooter from "../core/JetpackComposeAppFooter";
 import { makeStyles } from "@material-ui/core/styles";
 import NavigationBar from "../core/NavigationBar";
 import PageTitle from "../core/PageTitle";
@@ -95,7 +96,7 @@ export default function ComponentPreviewCardsSection(
                   />
                 </Grid>
               </Grid>
-              <Grid item xs={12} lg={12} className={classes.searchBar}>
+              <Grid item xs={12} lg={12}>
                 <ComponentsSearchBar
                   onChangeHandler={setSearchQuery}
                   componentCategories={uniqueComponentCategories.sort()}
@@ -138,6 +139,9 @@ export default function ComponentPreviewCardsSection(
             </Grid>
           </Container>
         </div>
+        <div className={classes.footer}>
+          <JetpackComposeAppFooter />
+        </div>
       </main>
     </>
   );
@@ -164,10 +168,19 @@ const useStyles = makeStyles({
     alignItems: "center",
     marginTop: "5%",
   },
-  grid: {},
   title: {
     marginBottom: 0,
     paddingBottom: 0,
   },
-  searchBar: {},
+  footer: {
+    marginTop: "2%",
+    height: "20vh",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "#000000",
+    marginBottom: "0px",
+    bottom: "0px",
+  },
 });
