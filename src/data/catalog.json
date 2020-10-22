@@ -300,5 +300,17 @@
     "categories": [
       "Library"
     ]
+  },
+  {
+    "id": "https://github.com/android/compose-samples",
+    "title": "Compose Samples",
+    "description": "Official Jetpack Compose Sample Apps by Google",
+    "url": "https://github.com/android/compose-samples",
+    "imageUrl": "https://github.com/android/compose-samples/raw/main/Jetcaster/docs/jetcaster.gif",
+    "addedDate": "10-21-2020",
+    "categories": [
+      "Examples"
+    ],
+    "contributorName": "Google"
   }
 ]
