@@ -78,6 +78,7 @@ lightweight so that anyone can contribute.
 Since the site uses Gatsby, it has two modes for compiling a site:
 
 Develop - run with the `gatsby develop` command
+
 Build - run with `gatsby build` and then `gatsby serve`
 
 
