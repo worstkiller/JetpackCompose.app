@@ -49,14 +49,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     });
   });
 
-  createPage({
-    path: "/",
-    component: require.resolve("./src/components/ifttt/IfThisThenThat.tsx"),
-    context: {
-      iftttArray: iftttArrray,
-    },
-  });
-
   // This is called when you clear out the selection using the 'x' in the text field.
   createPage({
     path: `What-is-the-equivalent-of--in-Jetpack-Compose`,
@@ -179,6 +171,17 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
   createPage({
     path: `compose-catalog`,
+    component: require.resolve(
+      "./src/components/catalog/ComponentPreviewCardsSection.tsx"
+    ),
+    context: {
+      componentsArray: componentsArray,
+      githubMap: githubResultMap,
+    },
+  });
+
+  createPage({
+    path: "/",
     component: require.resolve(
       "./src/components/catalog/ComponentPreviewCardsSection.tsx"
     ),
