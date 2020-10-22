@@ -75,11 +75,13 @@ lightweight so that anyone can contribute.
 
 ## Building the website
 
-Since the site uses Gatsby, it has two modes for compiling a site:
+1. The site uses Github API for pulling the stars for github project that are added to Compose Catalog. In order to use it properly, [generate a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) and copy it.
 
-Develop - run with the `gatsby develop` command
+2. Since the site uses Gatsby, it has two modes for compiling a site:
 
-Build - run with `gatsby build` and then `gatsby serve`
+Develop - run with the `GITHUB_TOKEN=<TOKEN_FROM_STEP_1> gatsby develop` command
+
+Build - run with `GITHUB_TOKEN=<TOKEN_FROM_STEP_1> gatsby build` and then `gatsby serve`
 
 
 ## Contributing
