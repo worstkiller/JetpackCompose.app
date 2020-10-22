@@ -73,6 +73,14 @@ lightweight so that anyone can contribute.
     </tr>
 </table>
 
+## Building the website
+
+Since the site uses Gatsby, it has two modes for compiling a site:
+
+Develop - run with the `gatsby develop` command
+Build - run with `gatsby build` and then `gatsby serve`
+
+
 ## Contributing
 
 Pull requests are welcome! I'd love your help in improving the website. Feel
