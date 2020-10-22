@@ -30,15 +30,18 @@ There are 4 main sections in the website:
 
 The website uses the following frameworks & tools:
 
-* [Gatsby](https://www.gatsbyjs.com/)
-* [Vercel](https://vercel.com/) for hosting the site and continous deployments
-* [React](https://reactjs.org/)
-* [Forestry](https://forestry.io/) - CMS layer so that I can organize the
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Vercel](https://vercel.com/) for hosting the site and continous deployments
+- [React](https://reactjs.org/)
+- [Forestry](https://forestry.io/) - CMS layer so that I can organize the
   content of the site. All the content is stored within this repo itself in json files. You can find them [here](src/data)
 
 <br/>
 
-The table below illustrates links you to the relevant folders for each part of the website. **If you want to update any of the content on the site, you can simply do so by updating corresponding json files**. It's intentionally lightweight so that anyone can contribute. 
+The table below illustrates links you to the relevant folders for each part of
+the website. **If you want to update any of the content on the site, you can
+simply do so by updating the corresponding data/content json files**. It's intentionally
+lightweight so that anyone can contribute.
 
 <table align="center" style="width:100%">
     <tr>
@@ -69,7 +72,6 @@ The table below illustrates links you to the relevant folders for each part of t
         </td>
     </tr>
 </table>
-
 
 ## Contributing
 
