@@ -337,5 +337,17 @@
     "categories": [
       "Examples"
     ]
+  },
+  {
+    "id": "https://github.com/halilozercan/ComposeVideoPlayer",
+    "title": "Compose Video Player",
+    "description": "A Video Player application with complete gestures and controls support",
+    "contributorName": "Halil Ozercan",
+    "url": "https://github.com/halilozercan/ComposeVideoPlayer",
+    "imageUrl": "https://raw.githubusercontent.com/halilozercan/ComposeVideoPlayer/master/preview.gif",
+    "addedDate": "10-22-2020",
+    "categories": [
+      "Examples"
+    ]
   }
 ]
