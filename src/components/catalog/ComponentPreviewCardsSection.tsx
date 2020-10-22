@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { Helmet } from "react-helmet";
 import { makeStyles } from "@material-ui/core/styles";
 import NavigationBar from "../core/NavigationBar";
+import PageTitle from "../core/PageTitle";
 import { RouteComponentProps } from "@reach/router";
 import React, { useState, useEffect } from "react";
 
@@ -57,21 +58,24 @@ export default function ComponentPreviewCardsSection(
       <Helmet>
         <title>
           Compose Catalog: Find the most popular Jetpack Compose libraries,
-          examples and tools
+          tools and examples
         </title>
         <meta
           name="description"
-          content="Compose Catalog: Find the most popular Jetpack Compose libraries, examples and tools"
+          content="Compose Catalog: Discover the most popular Jetpack Compose libraries, tools and examples!"
         />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://jetpackcompose.app/compose-catalog" />
+        <meta
+          property="twitter:url"
+          content="https://jetpackcompose.app/compose-catalog"
+        />
         <meta
           property="twitter:title"
-          content="Compose Catalog: Find the most popular Jetpack Compose libraries, examples and tools"
+          content="Compose Catalog: Discover the most popular Jetpack Compose libraries, tools and examples!"
         />
         <meta
           property="twitter:description"
-          content="Compose Catalog: Find the most popular Jetpack Compose libraries, examples and tools"
+          content="Compose Catalog: Discover the most popular Jetpack Compose libraries, tools and examples!"
         />
         <meta
           property="twitter:image"
@@ -82,7 +86,15 @@ export default function ComponentPreviewCardsSection(
         <NavigationBar />
         <div className={classes.root}>
           <Container maxWidth="lg">
-            <Grid container className={classes.grid} spacing={2}>
+            <Grid container spacing={2}>
+              <Grid container justify="center" spacing={2}>
+                <Grid key={"pageTitle"} item xs={12} md={6}>
+                  <PageTitle
+                    header="Jetpack Compose Catalog"
+                    subheader="Discover the most popular Jetpack Compose libraries, tools and examples!"
+                  />
+                </Grid>
+              </Grid>
               <Grid item xs={12} lg={12} className={classes.searchBar}>
                 <ComponentsSearchBar
                   onChangeHandler={setSearchQuery}
@@ -150,11 +162,9 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "1%",
+    marginTop: "5%",
   },
-  grid: {
-    paddingTop: "2%",
-  },
+  grid: {},
   title: {
     marginBottom: 0,
     paddingBottom: 0,
