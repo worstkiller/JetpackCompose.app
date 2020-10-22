@@ -1,44 +1,95 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# JetpackCompose.app
 
-## Available Scripts
+[JetpackCompose.app](https://jetpackcompose.app/) is a website that helps you
+learn more about the biggest change in Android development since its inception.
+It consits of tools, tutorials, resources and examples that help you level up
+your Jetpack Compose knowledge.
 
-In the project directory, you can run:
+There are 4 main sections in the website:
 
-### `npm start`
+<table align="center" style="width:100%">
+    <tr>
+        <td><img src="screenshots/catalog_poster.png"></td>
+        <td><a href="http://jetpackcompose.app/compose-catalog">Compose Catalog</a> - The most reliable source for finding the latest libraries, tools and & examples about Jetpack Compose.</td>
+    </tr>
+    <tr>
+        <td><a href="http://jetpackcompose.app/What-is-the-equivalent-of--in-Jetpack-Compose">Which Compose API to use?</a> - An IFTTT'esque tool that lets you enter an API/Widget from classic Android and makes a recommendation for the corresponding API to use in Jetpack Compose.</td>
+        <td><img src="screenshots/ifttt_poster.png"></td>
+    </tr>
+    <tr>
+        <td><img src="screenshots/quick_bites_poster.png"></td>
+        <td><a href="http://jetpackcompose.app/quick-bites">Compose Quick Bites</a> - Easy-to-consume bite sized content about the core concepts of Jetpack Compose.</td>
+    </tr>
+    <tr>
+        <td><a href="http://jetpackcompose.app/faq">FAQ's</a> - The most common questions about Compose answered with links to relevant sources.</td>
+        <td><img src="screenshots/faq_poster.png"></td>
+    </tr>
+</table>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The website uses the following frameworks & tools:
 
-### `npm test`
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Vercel](https://vercel.com/) for hosting the site and continous deployments
+- [React](https://reactjs.org/)
+- [Forestry](https://forestry.io/) - CMS layer so that I can organize the
+  content of the site. All the content is stored within this repo itself in json files. You can find them [here](src/data)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
 
-### `npm run build`
+The table below illustrates links you to the relevant folders for each part of
+the website. **If you want to update any of the content on the site, you can
+simply do so by updating the corresponding data/content json files**. It's intentionally
+lightweight so that anyone can contribute.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<table align="center" style="width:100%">
+    <tr>
+        <td>Compose Catalog</td>
+        <td>
+            <a href="src/components/catalog">UI Code</a> <br/>
+            <a href="src/data/catalog.json">Content/Data</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Which Compose API to use?</td>
+        <td>
+            <a href="src/components/ifttt">UI Code</a> <br/>
+            <a href="src/data/ifttt.json">Content/Data</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Compose Quick Bites</td>
+        <td>
+            <a href="src/components/quickbites">UI Code</a> <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>FAQ's</td>
+        <td>
+            <a href="src/components/faq">UI Code</a> <br/>
+            <a href="src/data/faq.json">Content/Data</a>
+        </td>
+    </tr>
+</table>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Pull requests are welcome! I'd love your help in improving the website. Feel
+free to browse through open issues to look for things that need work. If you
+have a new idea or want to suggest improvements, just oepn a new issue and we
+can discuss it there 🙏
 
-### `npm run eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+Copyright 2020 Vinay Gaba.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   http://www.apache.org/licenses/LICENSE-2.0
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+```

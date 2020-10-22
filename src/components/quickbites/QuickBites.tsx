@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Helmet } from "react-helmet";
 import JetpackComposeAppFooter from "../core/JetpackComposeAppFooter";
 import NavigationBar from "../core/NavigationBar";
+import PageTitle from "../core/PageTitle";
 import React from "react";
 import TweetEmbed from "react-tweet-embed";
 import Typography from "@material-ui/core/Typography";
@@ -40,13 +41,11 @@ function QuickBitesComponent(props: RouteComponentProps) {
             <Grid item xs={12} md={12}>
               <Grid container justify="center" spacing={2}>
                 <Grid key={"header"} item xs={12} md={4}>
-                  <Typography className={classes.pageHeader} align="center">
-                    Compose Quick Bites
-                  </Typography>
-                  <Typography className={classes.pageSubheader} align="center">
-                    Learn more about the core concepts of Jetpack Compose right
-                    from your Twitter feed!
-                  </Typography>
+                  <PageTitle
+                    header="Compose Quick Bites"
+                    subheader=" Learn more about the core concepts of Jetpack Compose right
+                    from your Twitter feed!"
+                  />
                 </Grid>
               </Grid>
               <Grid container justify="center" spacing={2}>
@@ -85,17 +84,6 @@ function QuickBitesComponent(props: RouteComponentProps) {
 const useStyles = makeStyles({
   root: {
     marginTop: "5%",
-  },
-  pageHeader: {
-    fontSize: 30,
-    fontFamily: "Playfair Display",
-    marginBottom: "1%",
-    color: "#78C257",
-  },
-  pageSubheader: {
-    fontSize: 20,
-    fontWeight: "lighter",
-    fontFamily: "Roboto",
   },
   issueTitle: {
     fontSize: 20,

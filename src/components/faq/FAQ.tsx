@@ -8,6 +8,7 @@ import JetpackComposeAppFooter from "../core/JetpackComposeAppFooter";
 import { makeStyles } from "@material-ui/core/styles";
 import NavigationBar from "../core/NavigationBar";
 import parse from "html-react-parser";
+import PageTitle from "../core/PageTitle";
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { RouteComponentProps } from "@reach/router";
@@ -15,6 +16,7 @@ import { RouteComponentProps } from "@reach/router";
 interface FAQPageComponentProps extends RouteComponentProps {
   pageContext: {
     qnaArray: [any];
+    lastUpdateDate: string;
   };
 }
 
@@ -47,14 +49,12 @@ export default function FAQPageComponent(props: FAQPageComponentProps) {
         <NavigationBar />
         <div className={classes.root}>
           <Container maxWidth="md">
-            <Typography className={classes.pageHeader} align="center">
-              Frequently Asked Questions
-            </Typography>
-            <Typography className={classes.pageSubheader} align="center">
-              Find answers to frequently asked questions about Jetpack Compose!
-            </Typography>
+            <PageTitle
+              header="Frequently Asked Questions"
+              subheader="Find answers to frequently asked questions about Jetpack Compose!"
+            />
             <Typography className={classes.lastUpdated} align="center">
-              Last updated: 7th August, 2020
+              Last updated: {props.pageContext.lastUpdateDate}
             </Typography>
             {props.pageContext.qnaArray.map((qna) => (
               <Accordion>
@@ -89,17 +89,6 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     marginTop: "5%",
-  },
-  pageHeader: {
-    fontSize: 30,
-    fontFamily: "Playfair Display",
-    marginBottom: "2%",
-    color: "#78C257",
-  },
-  pageSubheader: {
-    fontSize: 20,
-    fontWeight: "lighter",
-    fontFamily: "Roboto",
   },
   lastUpdated: {
     fontSize: 15,

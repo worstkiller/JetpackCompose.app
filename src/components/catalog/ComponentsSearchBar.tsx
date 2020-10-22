@@ -13,7 +13,7 @@ import TextField from "@material-ui/core/TextField";
 
 interface ComponentsSearchBarProps {
   onChangeHandler: (value: string[]) => void;
-  componentCategories: string[]
+  componentCategories: string[];
 }
 
 export default function ComponentsSearchBar(props: ComponentsSearchBarProps) {
@@ -41,7 +41,7 @@ export default function ComponentsSearchBar(props: ComponentsSearchBarProps) {
               {...params}
               variant="outlined"
               label="Filter Categories"
-              placeholder="Example: Input"
+              placeholder="Example: Animation"
             />
           )}
         />

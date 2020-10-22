@@ -1,8 +1,7 @@
-import Avatar from "@material-ui/core/Avatar";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Chip from "@material-ui/core/Chip";
+import clsx from "clsx";
 import Grid from "@material-ui/core/Grid";
 import StarBorderRounded from "@material-ui/icons/StarBorderRounded";
 import { makeStyles } from "@material-ui/core/styles";
@@ -31,7 +30,7 @@ export const ComponentPreviewCard: FunctionComponent<ComponentPreviewCardProps> 
           window.open(props.resourceLink, "_blank");
         }}
       >
-        <CardMedia image={props.imageUrl} className={classes.media} />
+        <CardMedia className={clsx(classes.media)} image={props.imageUrl} />
         <CardContent className={classes.cardContent}>
           <Grid
             container
@@ -52,9 +51,12 @@ export const ComponentPreviewCard: FunctionComponent<ComponentPreviewCardProps> 
                       className={classes.starIcon}
                       fontSize="small"
                     />
-                    <span className={classes.starText}>
+                    <Typography className={classes.starText}>
                       {props.githubStars}
-                    </span>
+                    </Typography>
+                    {/* <span className={classes.starText}>
+                      {props.githubStars}
+                    </span> */}
                   </Grid>
                 ) : (
                   ""
@@ -137,6 +139,9 @@ const useStyles = makeStyles({
   starGridRow: {
     display: "inline-flex",
     verticalAlign: "middle",
+    alignItems: "center",
+    alignContent: "center",
+    justify: "center",
   },
   starIcon: {
     color: "#586069",
@@ -145,7 +150,5 @@ const useStyles = makeStyles({
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#586069",
-    display: "flex",
-    verticalAlign: "middle",
   },
 });

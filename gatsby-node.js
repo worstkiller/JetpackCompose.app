@@ -49,14 +49,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     });
   });
 
-  createPage({
-    path: "/",
-    component: require.resolve("./src/components/ifttt/IfThisThenThat.tsx"),
-    context: {
-      iftttArray: iftttArrray,
-    },
-  });
-
   // This is called when you clear out the selection using the 'x' in the text field.
   createPage({
     path: `What-is-the-equivalent-of--in-Jetpack-Compose`,
@@ -69,7 +61,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   /* FAQ Page Generation */
   const qnaResult = await graphql(`
     {
-      allQnaJson {
+      allFaqJson {
         edges {
           node {
             question
@@ -80,7 +72,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   `);
 
-  let qnaArray = qnaResult.data.allQnaJson.edges.map((edges) => {
+  let qnaArray = qnaResult.data.allFaqJson.edges.map((edges) => {
     return edges.node;
   });
 
@@ -89,6 +81,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     component: require.resolve("./src/components/faq/FAQ.tsx"),
     context: {
       qnaArray: qnaArray,
+      lastUpdateDate: new Date().toISOString().slice(0, 10),
     },
   });
 
@@ -101,7 +94,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   /* Compose Marketplace */
   const componentsResult = await graphql(`
     {
-      allComponentsJson {
+      allCatalogJson {
         edges {
           node {
             id
@@ -118,7 +111,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   `);
 
   let queryString = "";
-  componentsResult.data.allComponentsJson.edges.forEach((edge) => {
+  componentsResult.data.allCatalogJson.edges.forEach((edge) => {
     const element = edge.node;
 
     const url = element.url;
@@ -170,16 +163,27 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     githubResultMap[element.url] = element;
   });
 
-  let componentsArray = componentsResult.data.allComponentsJson.edges.map(
+  let componentsArray = componentsResult.data.allCatalogJson.edges.map(
     (edges) => {
       return edges.node;
     }
   );
 
   createPage({
-    path: `wip`,
+    path: `compose-catalog`,
     component: require.resolve(
-      "./src/components/wip/ComponentPreviewCardsSection.tsx"
+      "./src/components/catalog/ComponentPreviewCardsSection.tsx"
+    ),
+    context: {
+      componentsArray: componentsArray,
+      githubMap: githubResultMap,
+    },
+  });
+
+  createPage({
+    path: "/",
+    component: require.resolve(
+      "./src/components/catalog/ComponentPreviewCardsSection.tsx"
     ),
     context: {
       componentsArray: componentsArray,

@@ -51,19 +51,25 @@ function NavigationBar(props: IProps) {
             </Typography>
           </Link>
           <Tab
-            label="Which Compose API to use?"
+            label="Compose Catalog"
             {...a11yProps(0)}
             className={classes.tab}
             value="/"
           />
           <Tab
-            label="Frequently Asked Questions"
+            label="Which Compose API to use?"
+            {...a11yProps(0)}
+            className={classes.tab}
+            value="/What-is-the-equivalent-of--in-Jetpack-Compose"
+          />
+          <Tab
+            label="FAQ's"
             {...a11yProps(1)}
             className={classes.tab}
             value="/faq"
           />
           <Tab
-            label="Compose Quick Bites"
+            label="Quick Bites"
             {...a11yProps(2)}
             className={classes.tab}
             value="/quick-bites"
