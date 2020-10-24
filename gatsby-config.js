@@ -54,6 +54,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.jetpackcompose.app`,
+      },
+    },
     "gatsby-transformer-json",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
