@@ -362,5 +362,18 @@
       "Library",
       "Debug Menu"
     ]
+  },
+  {
+    "id": "https://github.com/tehras/charts",
+    "description": "Simple android compose charts",
+    "contributorName": "Taras Koshkin",
+    "url": "https://github.com/tehras/charts",
+    "imageUrl": "https://github.com/tehras/charts/raw/master/assets/line_chart.gif",
+    "addedDate": "10-27-2020",
+    "categories": [
+      "Library",
+      "Chart"
+    ],
+    "title": "Charts"
   }
 ]
