@@ -388,5 +388,18 @@
       "Library",
       "Image Loading"
     ]
+  },
+  {
+    "id": "https://github.com/kazemihabib/compose-shimmer",
+    "description": "A Jetpack compose modifier to add a shimmering effect to any composable.",
+    "contributorName": "Habib Kazemi",
+    "url": "https://github.com/kazemihabib/compose-shimmer",
+    "imageUrl": "https://github.com/kazemihabib/compose-shimmer/raw/master/images/shimmer.gif?raw=true",
+    "categories": [
+      "Library",
+      "Shimmer"
+    ],
+    "title": "Compose Shimmer",
+    "addedDate": "12-27-2020"
   }
 ]
