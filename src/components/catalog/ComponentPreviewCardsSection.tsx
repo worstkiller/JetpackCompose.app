@@ -80,7 +80,7 @@ export default function ComponentPreviewCardsSection(
         />
         <meta
           property="twitter:image"
-          content="https://jetpackcompose.app/faq_poster.png"
+          content="https://jetpackcompose.app/catalog_poster.png"
         />
       </Helmet>
       <main>
