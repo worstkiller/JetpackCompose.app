@@ -401,5 +401,19 @@
     ],
     "title": "Compose Shimmer",
     "addedDate": "12-27-2020"
+  },
+  {
+    "title": "Compose MacOS Theme",
+    "description": "MacOS theme for JetBrains Compose UI framework",
+    "contributorName": "Carson Holzheimer",
+    "url": "https://github.com/Chozzle/compose-macos-theme",
+    "imageUrl": "https://github.com/Chozzle/compose-macos-theme/raw/master/screenshots/desktop.png",
+    "categories": [
+      "Library",
+      "Theme",
+      "MacOS"
+    ],
+    "id": "https://github.com/Chozzle/compose-macos-theme",
+    "addedDate": "1-23-2020"
   }
 ]
