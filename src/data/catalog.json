@@ -415,5 +415,18 @@
     ],
     "id": "https://github.com/Chozzle/compose-macos-theme",
     "addedDate": "1-23-2020"
+  },
+  {
+    "id": "https://github.com/DevSrSouza/compose-icons",
+    "title": "Compose Icons",
+    "description": "Compose icons is a pack of libraries that provide well known Icon Packs to use in Jetpack Compose Multiplatform.",
+    "contributorName": "Gabriel Souza",
+    "url": "https://github.com/DevSrSouza/compose-icons",
+    "imageUrl": "https://user-images.githubusercontent.com/29736164/111044124-6b131080-8425-11eb-9b03-0d3b409377a5.png",
+    "categories": [
+      "Library",
+      "Icons"
+    ],
+    "addedDate": "03-13-2021"
   }
 ]
