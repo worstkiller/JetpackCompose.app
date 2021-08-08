@@ -151,7 +151,7 @@
   },
   {
     "classicAndroid": "RecyclerView",
-    "compose": "LazyColumnFor",
+    "compose": "LazyColumn",
     "exampleUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/scrollers/VerticalScrollableActivity.kt",
     "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary.html#lazycolumnfor"
   },
