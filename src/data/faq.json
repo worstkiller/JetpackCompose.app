@@ -5,7 +5,7 @@
   },
   {
     "question": "Can I start using Jetpack Compose in production apps",
-    "answer": "The general recommendation is that if you care about the users of your app, you should wait until a more stable release of Jetpack Compose is available. If its for an internal app, side project or prototypes, you can probably start experimenting with Jetpack Compose."
+    "answer": "Compose is ready to be used in production and many apps are already working on migrating their apps in production to embrace Compose."
   },
   {
     "question": "When should I expect a 1.0 release of Compose?",
