@@ -1,7 +1,7 @@
 [
   {
     "question": "What's the current status of Jetpack Compose?",
-    "answer": "Jetpack Compose is currently in Beta. The API surface is still evolving but there are many people who are experimenting with it and providing feedback. If you'd like to play in role in shaping Jetpack Compose, I would encourage you to join the #compose channel in the <a target='_blank' href='http://slack.kotlinlang.org/'>Kotlin Lang Slack Channel</a>. If you'd like to learn more about Jetpack Compose, I maintain <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example'>this repo</a> that will help you get started!"
+    "answer": "Jetpack Compose announced its 1.0 release in July 2021. The API surface is fairly stable and Compose is ready to be used in production. If you'd like to learn more about Jetpack Compose, I maintain <a target='_blank' href='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example'>this repo</a> that will help you get started!"
   },
   {
     "question": "Can I start using Jetpack Compose in production apps",
