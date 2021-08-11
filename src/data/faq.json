@@ -8,10 +8,6 @@
     "answer": "Compose is ready to be used in production and many apps are already working on migrating their apps in production to embrace Compose."
   },
   {
-    "question": "When should I expect a 1.0 release of Compose?",
-    "answer": "An 1.0 release for Compose is expected in 2021 as per the last official announcement."
-  },
-  {
     "question": "Will Fragments be deprecated once Compose is released?",
     "answer": "<p>Compose didn't start with the goal replacing fragments per se but it’s a fantastic side effect. In most use cases, you shouldn’t need fragments at all if you are starting a pure compose screen/app. Moreover, since there are millions of apps that still use Fragments, there will most likely be ways to use it with that, although definitely not a requirement. </p>"
   },
@@ -41,7 +37,7 @@
   },
   {
     "question": "What kind of tooling is available with Compose?",
-    "answer": "<p>Android Studio lets you preview your composable functions within the IDE itself, instead of needing to download the app to an Android device or emulator. This is a fantastic feature as you can preview all your custom components(read composable functions) from the comforts of the IDE.</p><p>The main restriction is, the composable function must not take any parameters. If your composable function requires a parameter, you can simply wrap your component inside another composable function that doesn't take any parameters and call your composable function with the appropriate params. Also, don't forget to annotate it with @Preview & @Composable annotations. </p><p>In addition, you can also deploy a composable function directly to your device for quickly testing it as you are developing it.Lastly, Android Studio even lets you interact with the components right from Android Studio.</p><p><img src='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/raw/master/screenshots/compose_preview.gif' /></p>"
+    "answer": "<p>Android Studio lets you preview your composable functions within the IDE itself, instead of needing to download the app to an Android device or emulator. This is a fantastic feature as you can preview all your custom components(read composable functions) from the comforts of the IDE.</p><p>The main restriction is, the composable function must not take any parameters. If your composable function requires a parameter, you can simply wrap your component inside another composable function that doesn't take any parameters and call your composable function with the appropriate params. Also, don't forget to annotate it with @Preview & @Composable annotations. </p><p>In addition, you can also deploy a composable function directly to your device for quickly testing it as you are developing it. Android Studio even lets you interact with the components right from Android Studio.</p><p><img src='https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/raw/master/screenshots/compose_preview.gif' /></p>"
   },
   {
     "question": "How will I use view models and live data with Compose?",
@@ -53,7 +49,7 @@
   },
   {
     "question": "How does one handle orientation changes in Compose? <span id='contribution'>(Contributed by <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klippenstein</a>)</span>",
-    "answer": "One of the advantages of declarative programming is that you can model these changes through control flow. In order to change UI based on the size of the screen or the orientation, you can simply us an <i>if condition</i> to handle these changes."
+    "answer": "One of the advantages of declarative programming is that you can model these changes through control flow. In order to change UI based on the size of the screen or the orientation, you can simply us an <i>if condition</i> to handle these changes. The compose team also recommends that you handle the config changes manually and then show the appropriate Composable component using logic that takes the available screen size into account."
   },
   {
     "question": "Does Compose work with WearOS?",
@@ -85,6 +81,6 @@
   },
   {
     "question": "How does navigation work in Compose? <span id='contribution'>(Edits by <a href='https://twitter.com/brettbestaus' target='_blank'>Brett Best</a>, <a href='https://twitter.com/zachklipp' target='_blank'>Zach Klippenstein</a>)</span>",
-    "answer": "<p>Navigation support hasn't been added to Compose yet. However, it is expected that it is going to be compatible with <a href='https://developer.android.com/guide/navigation/navigation-getting-started'>Navigation Component</a>.</p><p>Having said that, there have been some attempts made by the community to create a navigation library for Compose - <a href='https://github.com/zsoltk/compose-router'>Compose Router</a></p>"
+    "answer": "<p>Compose Navigation support has been added to the AndroidX Navigation library. You can check it out <a href='https://developer.android.com/jetpack/compose/navigation'>here</a>."
   }
 ]
