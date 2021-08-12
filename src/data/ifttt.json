@@ -103,9 +103,9 @@
   },
   {
     "classicAndroid": "layer-list shadow",
-    "compose": "Modifier.drawShadow",
+    "compose": "Modifier.shadow",
     "exampleUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/material/ShadowActivity.kt",
-    "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/ui/core/package-summary#drawshadow"
+    "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/ui/draw/package-summary#(androidx.compose.ui.Modifier).shadow(androidx.compose.ui.unit.Dp,androidx.compose.ui.graphics.Shape,kotlin.Boolean)"
   },
   {
     "classicAndroid": "layout_margin",
