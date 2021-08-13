@@ -54,6 +54,12 @@
     "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/package-summary#constraintlayout"
   },
   {
+    "classicAndroid": "coroutineScope.launch",
+    "compose": "LaunchedEffect",
+    "exampleUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/state/livedata/LiveDataActivity.kt#L190",
+    "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary#LaunchedEffect(kotlin.Any,kotlin.coroutines.SuspendFunction1)"
+  },
+  {
     "classicAndroid": "Dark Mode",
     "compose": "isSystemInDarkTheme()",
     "exampleUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/theme/DarkModeActivity.kt",
