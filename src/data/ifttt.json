@@ -141,7 +141,7 @@
     "classicAndroid": "match_parent",
     "compose": "Modifier.fillMaxSize",
     "exampleUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/87686bffdcbc942d206b1de574b4486bd54fb5b9/app/src/main/java/com/example/jetpackcompose/text/SimpleTextActivity.kt#L31",
-    "documentationUrl": ""
+    "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier#(androidx.compose.ui.Modifier).fillMaxSize(kotlin.Float)"
   },
   {
     "classicAndroid": "OnClickListener",
