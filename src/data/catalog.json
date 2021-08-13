@@ -490,5 +490,18 @@
       "Examples"
     ],
     "description": "Collection of UIs and Animations built with Jetpack Compose for Android"
+  },
+  {
+    "id": "https://github.com/alorma/Compose-Settings",
+    "title": "Compose Settings",
+    "description": "Android #JetpackCompose Settings library",
+    "contributorName": "Bernat Borrás Paronella",
+    "url": "https://github.com/alorma/Compose-Settings",
+    "imageUrl": "https://github.com/alorma/Compose-Settings/raw/main/docs/art/screenshot_links.jpeg",
+    "addedDate": "08-12-2021",
+    "categories": [
+      "Library",
+      "Preferences"
+    ]
   }
 ]
