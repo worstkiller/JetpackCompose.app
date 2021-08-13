@@ -13,12 +13,12 @@
     ]
   },
   {
-    "id": "https://github.com/chrisbanes/accompanist",
+    "id": "https://github.com/google/accompanist",
     "title": "Accompanist",
     "description": "A collection of extension libraries for Jetpack Compose",
     "contributorName": "Chris Banes",
-    "url": "https://github.com/chrisbanes/accompanist",
-    "imageUrl": "https://github.com/chrisbanes/accompanist/raw/main/picasso/images/crossfade.gif",
+    "url": "https://github.com/google/accompanist",
+    "imageUrl": "https://github.com/google/accompanist/raw/main/picasso/images/crossfade.gif",
     "addedDate": "10-19-2020",
     "categories": [
       "Library",
