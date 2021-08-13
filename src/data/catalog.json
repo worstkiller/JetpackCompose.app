@@ -265,8 +265,8 @@
     ]
   },
   {
-    "id": "https://github.com/Popalay/Tetris-Compose",
-    "title": "Tetris Compose",
+    "id": "https://github.com/Popalay/Retrogamer-Compose",
+    "title": "Retrogamer Compose",
     "description": "Tetris implemented using Jetpack Compose",
     "url": "https://github.com/Popalay/Retrogamer-Compose",
     "imageUrl": "https://github.com/Popalay/Retrogamer-Compose/raw/master/art/sample.gif",
@@ -351,11 +351,11 @@
     ]
   },
   {
-    "id": "https://github.com/alorma/ComposeDrawer",
-    "title": "Compose Drawer",
+    "id": "https://github.com/alorma/Compose-Debug-Drawer",
+    "title": "Compose Debug Drawer",
     "description": "A debug drawer for Compose!",
     "contributorName": "Bernat Borrás Paronella",
-    "url": "https://github.com/alorma/ComposeDrawer",
+    "url": "https://github.com/alorma/Compose-Debug-Drawer",
     "imageUrl": "https://github.com/alorma/Compose-Debug-Drawer/raw/main/art/drawer-v0.1.0-beta-02.png",
     "addedDate": "10-23-2020",
     "categories": [
