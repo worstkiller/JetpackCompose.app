@@ -428,5 +428,18 @@
       "Icons"
     ],
     "addedDate": "03-13-2021"
+  },
+  {
+    "id": "https://github.com/halilozercan/compose-schedule-calendar",
+    "title": "Compose Schedule Calendar",
+    "contributorName": "Halil Ozercan",
+    "url": "https://github.com/halilozercan/compose-schedule-calendar",
+    "imageUrl": "https://github.com/halilozercan/compose-schedule-calendar/raw/main/assets/demo.gif",
+    "addedDate": "08-12-2021",
+    "categories": [
+      "Library",
+      "Calendar"
+    ],
+    "description": "Demo app for a horizontal schedule(event) calendar"
   }
 ]
