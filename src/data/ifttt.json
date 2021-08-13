@@ -96,6 +96,12 @@
     "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/ui/res/package-summary#loadimageresource"
   },
   {
+    "classicAndroid": "GridLayoutManager",
+    "compose": "LazyVerticalGrid",
+    "exampleUrl": "",
+    "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#LazyVerticalGrid(androidx.compose.foundation.lazy.GridCells,androidx.compose.ui.Modifier,androidx.compose.foundation.lazy.LazyListState,androidx.compose.foundation.layout.PaddingValues,androidx.compose.foundation.layout.Arrangement.Vertical,androidx.compose.foundation.layout.Arrangement.Horizontal,kotlin.Function1)"
+  },
+  {
     "classicAndroid": "ImageView",
     "compose": "Image",
     "exampleUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/image/ImageActivity.kt",
