@@ -1,5 +1,17 @@
 [
   {
+    "id": "https://github.com/JakeWharton/mosaic",
+    "title": "Mosaic",
+    "description": "An experimental tool for building console UI in Kotlin using the Jetpack Compose compiler/runtime",
+    "contributorName": "Jake Wharton",
+    "url": "https://github.com/JakeWharton/mosaic",
+    "imageUrl": "https://github.com/JakeWharton/mosaic/raw/trunk/samples/jest/demo.svg",
+    "addedDate": "08-12-2021",
+    "categories": [
+      "Console UI"
+    ]
+  },
+  {
     "id": "https://github.com/airbnb/Showkase",
     "title": "Showkase",
     "description": "🔦 Showkase is an annotation-processor based Android library that helps you organize, discover and search Jetpack Compose UI elements",
