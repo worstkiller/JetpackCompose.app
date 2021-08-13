@@ -1,17 +1,5 @@
 [
   {
-    "id": "https://github.com/JakeWharton/mosaic",
-    "title": "Mosaic",
-    "description": "An experimental tool for building console UI in Kotlin using the Jetpack Compose compiler/runtime",
-    "contributorName": "Jake Wharton",
-    "url": "https://github.com/JakeWharton/mosaic",
-    "imageUrl": "https://github.com/JakeWharton/mosaic/raw/trunk/samples/jest/demo.svg",
-    "addedDate": "08-12-2021",
-    "categories": [
-      "Console UI"
-    ]
-  },
-  {
     "id": "https://github.com/airbnb/Showkase",
     "title": "Showkase",
     "description": "🔦 Showkase is an annotation-processor based Android library that helps you organize, discover and search Jetpack Compose UI elements",
@@ -100,6 +88,18 @@
     "categories": [
       "Examples",
       "Tutorial"
+    ]
+  },
+  {
+    "id": "https://github.com/JakeWharton/mosaic",
+    "title": "Mosaic",
+    "description": "An experimental tool for building console UI in Kotlin using the Jetpack Compose compiler/runtime",
+    "contributorName": "Jake Wharton",
+    "url": "https://github.com/JakeWharton/mosaic",
+    "imageUrl": "https://github.com/JakeWharton/mosaic/raw/trunk/samples/jest/demo.svg",
+    "addedDate": "08-12-2021",
+    "categories": [
+      "Console UI"
     ]
   },
   {
@@ -453,5 +453,17 @@
       "Calendar"
     ],
     "description": "Demo app for a horizontal schedule(event) calendar"
+  },
+  {
+    "id": "https://github.com/vanpra/compose-material-dialogs",
+    "title": "Compose Material Dialog",
+    "description": "A Material Dialog Builder for Jetpack Compose",
+    "contributorName": "Pranav Maganti",
+    "url": "https://github.com/vanpra/compose-material-dialogs",
+    "imageUrl": "https://raw.githubusercontent.com/vanpra/compose-material-dialogs/main/imgs/date_and_time.png",
+    "addedDate": "08-12-2021",
+    "categories": [
+      "Dialogs"
+    ]
   }
 ]
