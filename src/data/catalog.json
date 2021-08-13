@@ -465,5 +465,17 @@
     "categories": [
       "Dialogs"
     ]
+  },
+  {
+    "id": "https://github.com/adrielcafe/lyricist",
+    "title": "Lyricist",
+    "description": "🌎 The missing I18N/L10N (internationalization/localization) library for Jetpack Compose!",
+    "contributorName": " Adriel Café ",
+    "url": "https://github.com/adrielcafe/lyricist",
+    "imageUrl": "",
+    "addedDate": "08-12-2021",
+    "categories": [
+      "i18n"
+    ]
   }
 ]
