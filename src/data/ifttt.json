@@ -175,9 +175,9 @@
   },
   {
     "classicAndroid": "ScrollView",
-    "compose": "ScrollableColumn",
-    "exampleUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/scrollers/HorizontalScrollableActivity.kt",
-    "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/foundation/package-summary#scrollablerow"
+    "compose": "Modifier.scrollable",
+    "exampleUrl": "https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/scrollers/VerticalScrollableActivity.kt#L104",
+    "documentationUrl": "https://developer.android.com/reference/kotlin/androidx/compose/foundation/gestures/package-summary#(androidx.compose.ui.Modifier).scrollable(androidx.compose.foundation.gestures.ScrollableState,androidx.compose.foundation.gestures.Orientation,kotlin.Boolean,kotlin.Boolean,androidx.compose.foundation.gestures.FlingBehavior,androidx.compose.foundation.interaction.MutableInteractionSource)"
   },
   {
     "classicAndroid": "Slider",
