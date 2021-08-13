@@ -477,5 +477,18 @@
     "categories": [
       "i18n"
     ]
+  },
+  {
+    "id": "https://github.com/prafullmishra/JetComposer",
+    "title": "JetComposer",
+    "contributorName": "Praful Mishra",
+    "url": "https://github.com/prafullmishra/JetComposer",
+    "imageUrl": "https://camo.githubusercontent.com/15f723df08e49285dea1f94309ac1689370bd5e21e74efcc32fa5ebcdd272ca0/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f694d445567344d4c635a6872484231726a6b2f67697068792e676966",
+    "addedDate": "08-12-2021",
+    "categories": [
+      "Animation",
+      "Examples"
+    ],
+    "description": "Collection of UIs and Animations built with Jetpack Compose for Android"
   }
 ]
