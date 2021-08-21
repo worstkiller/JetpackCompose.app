@@ -528,5 +528,18 @@
     "categories": [
       "Examples"
     ]
+  },
+  {
+    "id": "https://github.com/worstkiller/jetpackcompose_canvas_icon_pack",
+    "title": "Jetpack Compose Canvas",
+    "description": "This sample is to demonstrate the Jetpack Compose's Canvas API usages by creating an icons pack using Canvas draw functions.",
+    "contributorName": "Vikas Kumar",
+    "url": "https://github.com/worstkiller/jetpackcompose_canvas_icon_pack",
+    "imageUrl": "https://github.com/worstkiller/jetpackcompose_canvas_icon_pack/blob/master/screenshots/white_1.jpg",
+    "addedDate": "08-21-2021",
+    "categories": [
+      "Canvas",
+      "Examples"
+    ]
   }
 ]
